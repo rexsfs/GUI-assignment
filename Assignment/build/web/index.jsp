@@ -79,10 +79,6 @@
             margin-top: 5px;
             font-weight: 500;
         }
-
-        .category-icon {
-            font-size: 24px;
-        }
     </style>
 </head>
 <header>
@@ -96,24 +92,18 @@
 
         <div class="categories">
             <div class="category-item">
-                <a href ="">
-                    <img src="pic_homepage/iem.jpg">
-                    <span class="category-name">IEM</span>
-                </a>
+                <img src="pic_homepage/iem.jpg">
+                <span class="category-name">IEM</span>
             </div>
 
             <div class="category-item">
-                <a href="#">
-                    <img src="pic_homepage/mouse.png">
-                    <span class="category-name">Mouse</span>
-                </a>
+                <img src="pic_homepage/mouse.png">
+                <span class="category-name">Mouse</span>
             </div>
 
             <div class="category-item">
-                <a href="#">
-                    <img src="pic_homepage/keyboard.png">
-                    <span class="category-name">Keyboard</span>
-                </a>
+                <img src="pic_homepage/keyboard.png">
+                <span class="category-name">Keyboard</span>
             </div>
         </div>
     </div>
