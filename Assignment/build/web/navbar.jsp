@@ -1,4 +1,4 @@
-<%-- 
+<%--
     Document   : navbar
     Created on : 31 Mar 2025, 7:43:06 pm
     Author     : yjee0
@@ -7,62 +7,66 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <style>
-     body { 
-            font-family: Arial, sans-serif; 
-            margin: 0; 
-            padding: 0; 
+     body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
 
-    
-        .navbar { 
-            display: flex; 
-            align-items: center; 
-            justify-content: space-between; 
-            padding: 10px 20px; 
-            background: white; 
-            border-bottom: 1px solid #ddd; 
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background: white;
+            border-bottom: 1px solid #ddd;
             position: relative;
         }
 
         .in-navbar {
             display: flex;
             align-items: center;
-            gap: 40px; 
+            gap: 40px;
         }
 
-        .navbar a { 
-            text-decoration: none; 
-            color: black; 
+        .navbar a {
+            text-decoration: none;
+            color: black;
             transition: all 0.2s ease;
         }
-        
+
         .in-navbar a:hover {
-            color: #4C60DF; 
+            color: #4C60DF;
             transform: translateY(5px);
         }
-        
-        .logo { 
-            width: 50px; 
+
+        .logo {
+            width: 50px;
         }
-        
-        .login_signup-btn { 
-            padding: 7px 12px; 
-            background: #4C60DF; 
-            border-radius: 8px; 
+
+        .in-navbar .login_signup-btn {
+            padding: 7px 12px;
+            background: #4C60DF;
+            color: #fff;
+            border-radius: 8px;
             text-decoration: none;
             font-size: 14px;
         }
 
-        .login_signup-btn:hover {
-            color: white;
+        .in-navbar .login_signup-btn:hover {
+            transform: none;
+            background: #fff;
+            color: #4C60DF;
+            border: #4C60DF 2px solid;
         }
-        
+
         .search-container {
             display: flex;
             align-items: center;
             position: relative;
         }
-        
+
         .search-input {
             width: 0;
             padding: 0;
@@ -70,22 +74,20 @@
             border-radius: 20px;
             background: #d9d9d9;
             outline: none;
-            transition: all 0.3s ease;
-            opacity: 0;
             position: absolute;
             right: 40px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             padding-left: 35px;
-            padding-right: 30px; 
-            display: flex;
+            padding-right: 30px;
+            display: none;
         }
-        
+
         .search-input.active {
             width: 350px;
             padding: 8px 35px;
-            opacity: 1;
+            display: block
         }
-        
+
         .search-icon {
             cursor: pointer;
             margin-left: 10px;
@@ -93,19 +95,18 @@
             z-index: 1;
             position: relative;
         }
-        
+
         .close-icon {
             position: absolute;
             right: 60px;
             cursor: pointer;
             color: #888;
-            opacity: 0;
-            transition: opacity 0.2s ease;
             z-index: 2;
+            display: none;
         }
-        
+
         .close-icon.active {
-            opacity: 1;
+            display: block;
         }
  </style>
 
@@ -113,7 +114,7 @@
     <a href="index.jsp">
         <img src="logo/logo_1.png" class="logo">
     </a>
-    
+
     <div class="in-navbar">
         <a href="index.jsp">Home</a>
         <a href="shop.jsp">Shop</a>
@@ -134,7 +135,7 @@
         function toggleSearch() {
             const searchInput = document.querySelector('.search-input');
             const closeIcon = document.getElementById('closeIcon');
-            
+
             searchInput.classList.toggle('active');
             closeIcon.classList.toggle('active');
 
@@ -146,7 +147,7 @@
         function closeSearch() {
             const searchInput = document.querySelector('.search-input');
             const closeIcon = document.getElementById('closeIcon');
-            
+
             searchInput.classList.remove('active');
             closeIcon.classList.remove('active');
             searchInput.value = '';
