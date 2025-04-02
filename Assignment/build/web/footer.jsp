@@ -14,16 +14,17 @@
         
         .footer {
             width: 100%;
-            height: 200px;
+            height: auto;
             background-color: #323232;
             display: flex;
             justify-content: center;
         }
         
-        .footer-content {
+        .footer_content {
             width: 100%;
             max-width: 1200px;
             display: flex;
+            flex-wrap: wrap;
         }
         
         .column {
@@ -44,12 +45,7 @@
             height: 60px; 
             width: auto;
         }
-            
-        .address {
-           text-align: left;
-           margin-top: 15px;
-        }
-        
+                 
         .column h3 {
             color: white;
             margin-bottom: 15px;
@@ -59,6 +55,16 @@
             color: #ccc;
             margin: 5px 0;
             font-size: 14px;
+        }
+             
+        .column a {
+            text-decoration: none;
+        }
+        
+        .column a:hover p {
+            color: #4C60DF; 
+            transform: translateX(5px);
+            transition: all 0.2s ease;
         }
         
         .tag {
@@ -72,45 +78,50 @@
             color: #999;
             margin: 0;
         }
+        
+        @media (max-width: 768px) {
+            .column {
+                width: 50%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .column {
+                width: 100%;
+            }
+        }
     </style>
     <body>
         <div class="footer">
-            <div class="footer-content">
-                <!-- Column 1 - Logo and Address -->
+            <div class="footer_content">
                 <div class="column">
                     <div class="logo_name">
                         <img src="logo/logo_2.jpg" class="logo">
                         <h2>Tech Rex</h2>
                     </div>
-                    <div class="address">
-                        <p>Jalan Genting Kelang,<br> Setapak, 53300 Kuala Lumpur</p>
-                    </div>
                 </div>
                 
-                <!-- Column 2 - Quick Links -->
+                <div class="column">
+                    <h3>Shop</h3>
+                    <a href="#"><p>IEM</p></a>
+                    <a href="#"><p>Mouse</p></a>
+                    <a href="#"><p>Keyboard</p></a>
+                </div>
+                
                 <div class="column">
                     <h3>Quick Links</h3>
-                    <p>Home</p>
-                    <p>Products</p>
-                    <p>Services</p>
-                    <p>About Us</p>
+                    <a href="#"><p>Home</p></a>
+                    <a href="#"><p>Shop</p></a>
+                    <a href="#"><p>About</p></a>
+                    <a href="#"><p>Contact</p></a>
                 </div>
                 
-                <!-- Column 3 - Support -->
                 <div class="column">
-                    <h3>Support</h3>
-                    <p>Contact Us</p>
-                    <p>FAQs</p>
-                    <p>Shipping Info</p>
-                    <p>Returns</p>
-                </div>
-                
-                <!-- Column 4 - Newsletter -->
-                <div class="column">
-                    <h3>Newsletter</h3>
-                    <p>Subscribe to our newsletter for the latest updates and offers.</p>
-                    <input type="email" placeholder="Your email" style="padding: 5px; width: 100%; margin-top: 10px;">
-                    <button style="margin-top: 10px; padding: 5px 10px; background: #555; color: white; border: none;">Subscribe</button>
+                    <h3>Contact</h3>
+                    <p>Address: Jalan Genting Kelang, Setapak, 53300 Kuala Lumpur</p>
+                    <p>Email: jxlim-wm23@student.tarc.edu.my</p>
+                    <p>Phone: +60 122511060</p>
+                    <p>Phone: +60 194001257</p>
                 </div>
             </div>
         </div>

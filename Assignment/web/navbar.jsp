@@ -14,7 +14,7 @@
         }
 
     
-  .navbar { 
+        .navbar { 
             display: flex; 
             align-items: center; 
             justify-content: space-between; 
@@ -33,6 +33,12 @@
         .navbar a { 
             text-decoration: none; 
             color: black; 
+            transition: all 0.2s ease;
+        }
+        
+        .in-navbar a:hover {
+            color: #4C60DF; 
+            transform: translateY(5px);
         }
         
         .logo { 
@@ -71,6 +77,7 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             padding-left: 35px;
             padding-right: 30px; 
+            display: flex;
         }
         
         .search-input.active {
@@ -111,7 +118,7 @@
         <a href="index.jsp">Home</a>
         <a href="shop.jsp">Shop</a>
         <a href="aboutus.jsp">About Us</a>
-        <a href="#">Contact</a>
+        <a href="contact.jsp">Contact</a>
 
         <div class="search-container">
             <input type="text" class="search-input" placeholder="Search products...">
