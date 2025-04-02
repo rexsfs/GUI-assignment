@@ -97,8 +97,10 @@
                 <div class="column">
                     <div class="logo_name">
                         <img src="logo/logo_2.jpg" class="logo">
-                        <h2>Giant Rex Tech Store</h2>
+                        <h3>Giant Rex Tech Store</h3>
                     </div>
+                    <p>Giant Rex Tech Store, founded in 2025     by Ng Zhun Onn and Yap Sheng Jing,
+                        grew from a small startup into a leading tech retailer.</p>
                 </div>
 
                 <div class="column">
