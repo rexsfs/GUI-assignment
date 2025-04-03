@@ -177,8 +177,8 @@
             }
 
             .image {
-                width: auto;
-                height: auto;
+                width: 100%;
+                height: 300px;
                 background: #f5f5f5;
                 border-radius: 6px;
                 margin-bottom: 15px;
@@ -192,7 +192,8 @@
             .image img {
                 width: 100%;
                 height: 100%;
-                object-fit: cover;
+                object-fit: contain;
+                background: white;
             }
 
             .name {
