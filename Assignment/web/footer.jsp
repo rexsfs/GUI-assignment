@@ -99,8 +99,8 @@
                         <img src="logo/logo_2.jpg" class="logo">
                         <h3>Giant Rex Tech Store</h3>
                     </div>
-                    <p>Giant Rex Tech Store, founded in 2025     by Ng Zhun Onn and Yap Sheng Jing,
-                        grew from a small startup into a leading tech retailer.</p>
+                    <p>Founded by six friends united by a shared passion for technology.
+                        With an unwavering focus on quality and the passion to make advanced tech more accessible.</p>
                 </div>
 
                 <div class="column">
