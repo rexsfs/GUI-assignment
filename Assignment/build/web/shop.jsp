@@ -12,16 +12,24 @@
         <title>ShopPage</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <style>
+            :root {
+                --primary-color: #4C60DF;
+                --secondary-color: #6c757d;
+                --light-color: #f8f9fa;
+                --dark-color: #343a40;
+            }
+
             body {
                 font-family: Arial, sans-serif;
                 margin: 0;
                 padding: 0;
+                background-color: #f5f7ff;
             }
 
             .title {
                 width: 100%;
                 height: 100px;
-                background: #4C60DF;
+                background: var(--primary-color);
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -48,143 +56,196 @@
                 text-decoration: underline;
             }
 
-            .product {
-                width: 100%;
+            <%-- filter --%>
+            .container {
                 display: flex;
-                margin-bottom: 10px;
+                padding: 20px;
+                max-width: 1400px;
+                margin: 0 auto;
+                gap: 20px;
+            }
+
+            .section {
+                width: 250px;
+                padding: 15px;
+                background: white;
+                border-radius: 8px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+                height: fit-content;
+                position: sticky;
+                top: 20px;
+                flex-shrink: 0;
+            }
+
+            .section h3 {
+                margin-top: 0;
+                color: var(--primary-color);
+                border-bottom: 1px solid #eee;
+                padding-bottom: 10px;
             }
 
             .filter {
-                width: 30%;
+                margin-bottom: 20px;
+            }
+
+            .option {
+                margin: 8px 0;
                 display: flex;
-                flex-direction: column;
                 align-items: center;
-                justify-content: center;
-            }
-
-            .category {
-                margin-top: 10px;
-                border: #d9d9d9 1px solid;
-                width: 50%;
-                height: auto;
-                border-radius: 0.5rem;
-            }
-
-            .category h3 {
-                text-align: center;
-            }
-
-            .selection {
-                padding: 0 0 15px 10px
             }
 
             input[type="checkbox"] {
                 width: 1rem;
                 height: 1rem;
-                accent-color: #4C60DF;
+                accent-color: var(--primary-color);
+                margin-right: 8px;
             }
 
             .range {
-                margin-top: 10px;
-                border: #d9d9d9 1px solid;
-                width: 50%;
-                height: auto;
-                border-radius: 0.5rem;
                 display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin-bottom: 10px;
-            }
-
-            .range h3 {
-                text-align: center;
-            }
-
-            .range form {
-                display: flex;
-                flex-direction: column;
+                gap: 10px;
                 align-items: center;
             }
 
-            .range-inputs {
-                display: flex;
-                align-items: center;
-                gap: 5px;
+            .range input {
+                width: 80px;
+                padding: 5px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
             }
 
-            input[type="number"] {
-                width: 5rem;
-                height: 1.5rem;
-                text-align: center;
-                border-radius: 0.3rem;
-            }
-
-            input[type="submit"] {
-                margin-top: 10px;
-                width: 5rem;
-                height: 1.5rem;
-                background-color: #4C60DF;
+            .apply {
+                background: var(--primary-color);
                 color: white;
                 border: none;
-                border-radius: 0.3rem;
+                padding: 8px 15px;
+                border-radius: 4px;
                 cursor: pointer;
-                margin-bottom: 10px;
-            }
-
-            .apply:hover{
-                background: #fff;
-                color: #4C60DF;
-                border: #4C60DF 2px solid;
-            }
-
-            /* Updated rating filter styles */
-            .rating-filter {
                 margin-top: 10px;
-                border: #d9d9d9 1px solid;
-                width: 50%;
-                height: auto;
-                border-radius: 0.5rem;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin-bottom: 10px;
-                padding: 10px 0;
+                transition: all 0.3s;
             }
 
-            .rating-filter h3 {
-                text-align: center;
-                margin-bottom: 10px;
+            .apply:hover {
+                background: #3a4bb8;
             }
 
             .star-rating {
                 display: flex;
-                justify-content: center;
                 gap: 5px;
+                margin-top: -10px;
             }
 
-            .star-rating .star {
-                font-size: 24px;
+            .star {
+                font-size: 18px;
                 color: #ddd;
                 cursor: pointer;
                 transition: color 0.2s;
             }
 
-            .star-rating .star.selected {
+            .star.selected, .star.hovered {
                 color: #FFD700;
             }
 
-            .star-rating .star.hovered {
+            .p-rating {
+                font-size: 12px;
+                color: #666;
+                margin-top: 10px;
+            }
+
+            <%-- Products --%>
+            .products-section {
+                flex: 1;
+            }
+
+            .products-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+
+            .card {
+                background: white;
+                border-radius: 8px;
+                padding: 15px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+                transition: transform 0.3s, box-shadow 0.3s;
+            }
+
+            .card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+
+            .image {
+                width: auto;
+                height: auto;
+                background: #f5f5f5;
+                border-radius: 6px;
+                margin-bottom: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #999;
+                overflow: hidden;
+            }
+
+            .image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .name {
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+
+            .price {
+                color: var(--primary-color);
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            .product-rating {
                 color: #FFD700;
+                margin-bottom: 15px;
             }
 
-            .rating-text {
-                margin-top: 5px;
-                font-size: 14px;
-                color: #555;
+            .add-to-cart {
+                width: 100%;
+                padding: 8px;
+                background: var(--primary-color);
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background 0.3s;
             }
 
-            .hidden-input {
-                display: none;
+            .add-to-cart:hover {
+                background: #3a4bb8;
+            }
+
+            @media (max-width: 1200px) {
+                .products-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+
+            @media (max-width: 768px) {
+                .container {
+                    flex-direction: column;
+                }
+
+                .section {
+                    width: 100%;
+                    position: static;
+                    margin-bottom: 20px;
+                }
+
+                .products-grid {
+                    grid-template-columns: 1fr;
+                }
             }
         </style>
     </head>
@@ -192,54 +253,106 @@
         <%@include file="navbar.jsp" %>
     </header>
     <body>
-
         <div class="title">
             <h2>SHOP</h2>
             <div class="title1">
-                <a href="home.jsp">Home</a> /
+                <a href="index.jsp">Home</a> /
                 <a href="shop.jsp">Shop</a>
             </div>
         </div>
 
-        <div class="product">
-            <div class="filter">
-                <div class="category">
+        <div class="container">
+            <div class="section">
+                <div class="filter">
                     <h3>Product Category</h3>
-                    <div class="selection">
+                    <div class="option">
                         <input type="checkbox" id="iem">
-                        <label> IEM</label><br>
+                        <label for="iem">IEM</label>
+                    </div>
+                    <div class="option">
                         <input type="checkbox" id="mouse">
-                        <label> Mouse</label><br>
+                        <label for="mouse">Mouse</label>
+                    </div>
+                    <div class="option">
                         <input type="checkbox" id="keyboard">
-                        <label> Keyboard</label><br>
+                        <label for="keyboard">Keyboard</label>
                     </div>
                 </div>
-                <div class="range">
+
+                <div class="filter">
                     <h3>Price Range</h3>
-                    <form>
-                        <div class="range-inputs">
-                            <input type="number" id="minPrice" name="minPrice" min="0" placeholder="Min">
-                            <span>-</span>
-                            <input type="number" id="maxPrice" name="maxPrice" min="0" placeholder="Max">
-                        </div>
-                        <input type="submit" value="Apply" class="apply">
-                    </form>
+                    <div class="range">
+                        <input type="number" id="minPrice" placeholder="Min" min="0">
+                        <span>to</span>
+                        <input type="number" id="maxPrice" placeholder="Max" min="0">
+                    </div>
+                    <button class="apply">Apply</button>
                 </div>
 
-                <div class="rating-filter">
+                <div class="filter">
                     <h3>Rating</h3>
-                    <form id="ratingForm">
-                        <div class="star-rating" id="starContainer">
-                            <i class="fa-regular fa-star star" data-value="1"></i>
-                            <i class="fa-regular fa-star star" data-value="2"></i>
-                            <i class="fa-regular fa-star star" data-value="3"></i>
-                            <i class="fa-regular fa-star star" data-value="4"></i>
-                            <i class="fa-regular fa-star star" data-value="5"></i>
+                    <div class="star-rating" id="starContainer">
+                        <i class="fa-regular fa-star star" data-value="1"></i>
+                        <i class="fa-regular fa-star star" data-value="2"></i>
+                        <i class="fa-regular fa-star star" data-value="3"></i>
+                        <i class="fa-regular fa-star star" data-value="4"></i>
+                        <i class="fa-regular fa-star star" data-value="5"></i>
+                    </div>
+                    <div class="p-rating">Click stars to filter</div>
+                    <input type="hidden" id="selectedRating" value="0">
+                    <button class="apply" style="margin-top: 10px;">Apply Rating</button>
+                </div>
+            </div>
+
+            <div class="products-section">
+                <div class="products-grid">
+                    <div class="card">
+                        <div class="image">
+                            <img src="pic_products/iem/Aful Explorer 3.png">
                         </div>
-                        <input type="hidden" id="selectedRating" name="selectedRating" value="0" class="hidden-input">
-                        <div class="rating-text">Click stars to select minimum rating</div>
-                        <input type="submit" value="Apply" class="apply" style="margin-top: 10px;">
-                    </form>
+                        <div class="name">Aful Explorer 1</div>
+                        <div class="price">RM 199.00</div>
+                        <div class="product-rating">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+
+                    <div class="card">
+                        <div class="image">
+                            <img src="pic_products/mouse/G pro hero 4.png">
+                        </div>
+                        <div class="name">Mouse</div>
+                        <div class="price">RM 299.00</div>
+                        <div class="product-rating">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+
+                    <div class="card">
+                        <div class="image">
+                            <img src="">
+                        </div>
+                        <div class="name">Keyboard</div>
+                        <div class="price">RM 159.00</div>
+                        <div class="product-rating">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -301,17 +414,6 @@
                         }
                     });
                 }
-
-                // Handle form submission
-                document.getElementById('ratingForm').addEventListener('submit', function (e) {
-                    e.preventDefault();
-                    const rating = selectedRatingInput.value;
-                    // Here you would typically send this to your server
-                    console.log('Filtering by rating: ' + rating + ' stars or higher');
-                    alert('Filtering by rating: ' + rating + ' stars or higher');
-                    // In a real application, you would submit the form or make an AJAX call
-                    // to filter the products based on the selected rating
-                });
             });
         </script>
     </body>
