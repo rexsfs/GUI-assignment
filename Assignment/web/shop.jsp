@@ -28,35 +28,44 @@
 
             .title {
                 width: 100%;
-                height: 100px;
-                background: var(--primary-color);
+                height: 150px;
+                background: linear-gradient(135deg, var(--primary-color), #3a4bb8);
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 color: white;
+                text-align: center;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             }
 
             .title h2 {
                 margin: 0;
+                font-size: 2.2rem;
+                font-weight: 600;
+                letter-spacing: 1px;
             }
 
             .title1 {
-                font-size: 14px;
-                margin-top: 5px;
+                font-size: 1rem;
+                margin-top: 15px;
+                display: flex;
+                gap: 10px;
+                align-items: center;
             }
 
             .title1 a {
-                color: white;
+                color: rgba(255,255,255,0.9);
                 text-decoration: none;
-                margin: 0 5px;
+                transition: all 0.3s ease;
             }
 
             .title1 a:hover {
+                color: white;
                 text-decoration: underline;
             }
 
-            <%-- filter --%>
+            /* filter */
             .container {
                 display: flex;
                 padding: 20px;
@@ -152,7 +161,7 @@
                 margin-top: 10px;
             }
 
-            <%-- Products --%>
+            /* Products */
             .products-section {
                 flex: 1;
             }
@@ -262,6 +271,7 @@
             </div>
         </div>
 
+        <!--Filter-->
         <div class="container">
             <div class="section">
                 <div class="filter">
@@ -305,6 +315,7 @@
                 </div>
             </div>
 
+            <!--Products-->
             <div class="products-section">
                 <div class="products-grid">
                     <div class="card">

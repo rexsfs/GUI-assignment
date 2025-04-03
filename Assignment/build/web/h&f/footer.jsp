@@ -120,8 +120,14 @@
 
                 <div class="column">
                     <h3>Contact</h3>
-                    <p>Address: Jalan Genting Kelang, Setapak, 53300 Kuala Lumpur</p>
+                    <p>Address: Ground Floor, Bangunan Tan Sri Khaw Kai Boh (Block A),
+                        Jalan Genting Kelang,
+                        Setapak 53300 Kuala Lumpur,
+                        Federal Territory of Kuala Lumpur</p>
+                    <br>
                     <p>Email: jxlim-wm23@student.tarc.edu.my</p>
+                    <p>Email: giantRexTechStore@gmail.com</p>
+                    <br>
                     <p>Phone: +60 122511060</p>
                     <p>Phone: +60 194001257</p>
                 </div>

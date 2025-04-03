@@ -27,7 +27,8 @@
             justify-content: center;
         }
 
-       .category-section {
+        /* category */
+        .category-section {
             max-width: 1200px;
             margin: 40px auto;
             padding: 0 20px;
@@ -87,6 +88,7 @@
 <body>
     <img src="pic_homepage/web_image.jpg" class="web_img">
 
+    <!--Categories-->
     <div class="category-section">
         <h2 class="category-title">Category</h2>
 
