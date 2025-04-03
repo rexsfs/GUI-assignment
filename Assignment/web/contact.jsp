@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>ContactPage</title>
+        <title>Contact Page</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     </head>
     <style>
@@ -50,7 +50,7 @@
             }
     </style>
     <header>
-        <%@include file="navbar.jsp" %>
+        <%@include file="h&f/navbar.jsp" %>
     </header>
     <body>
         <div class="title">
@@ -62,6 +62,6 @@
         </div>
     </body>
     <footer>
-        <%@include file="footer.jsp" %>
+        <%@include file="h&f/footer.jsp" %>
     </footer>
 </html>

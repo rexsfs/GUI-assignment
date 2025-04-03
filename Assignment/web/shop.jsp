@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>ShopPage</title>
+        <title>Shop Page</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <style>
             :root {
@@ -251,7 +251,7 @@
         </style>
     </head>
     <header>
-        <%@include file="navbar.jsp" %>
+        <%@include file="h&f/navbar.jsp" %>
     </header>
     <body>
         <div class="title">
@@ -327,24 +327,8 @@
                         <div class="image">
                             <img src="pic_products/mouse/G pro hero 4.png">
                         </div>
-                        <div class="name">Mouse</div>
+                        <div class="name">Logitech G Pro Hero</div>
                         <div class="price">RM 299.00</div>
-                        <div class="product-rating">
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-
-                    <div class="card">
-                        <div class="image">
-                            <img src="">
-                        </div>
-                        <div class="name">Keyboard</div>
-                        <div class="price">RM 159.00</div>
                         <div class="product-rating">
                             <i class="fa-regular fa-star"></i>
                             <i class="fa-regular fa-star"></i>
@@ -419,6 +403,6 @@
         </script>
     </body>
     <footer>
-        <%@include file="footer.jsp" %>
+        <%@include file="h&f/footer.jsp" %>
     </footer>
 </html>

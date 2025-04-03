@@ -112,7 +112,7 @@
 
 <div class="navbar">
     <a href="index.jsp">
-        <img src="logo/logo_1.png" class="logo">
+        <img src="logo/logo.jpg" class="logo">
     </a>
 
     <div class="in-navbar">

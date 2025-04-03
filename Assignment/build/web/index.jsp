@@ -10,7 +10,7 @@
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HomePage</title>
+    <title>Home Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <style>
         body {
@@ -82,7 +82,7 @@
     </style>
 </head>
 <header>
-       <%@include file="navbar.jsp" %>
+    <%@include file="h&f/navbar.jsp" %>
 </header>
 <body>
     <img src="pic_homepage/web_image.jpg" class="web_img">
@@ -109,6 +109,6 @@
     </div>
 </body>
 <footer>
-    <%@include file="footer.jsp" %>
+    <%@include file="h&f/footer.jsp" %>
 </footer>
 </html>

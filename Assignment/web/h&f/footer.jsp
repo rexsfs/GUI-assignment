@@ -96,7 +96,7 @@
             <div class="footer_content">
                 <div class="column">
                     <div class="logo_name">
-                        <img src="logo/logo_2.jpg" class="logo">
+                        <img src="logo/logo_3.PNG" class="logo">
                         <h3>Giant Rex Tech Store</h3>
                     </div>
                     <p>Founded by six friends united by a shared passion for technology.
@@ -112,10 +112,10 @@
 
                 <div class="column">
                     <h3>Quick Links</h3>
-                    <a href="#"><p>Home</p></a>
-                    <a href="#"><p>Shop</p></a>
-                    <a href="#"><p>About</p></a>
-                    <a href="#"><p>Contact</p></a>
+                    <a href="index.jsp"><p>Home</p></a>
+                    <a href="shop.jsp"><p>Shop</p></a>
+                    <a href="aboutus.jsp"><p>About</p></a>
+                    <a href="contact.jsp"><p>Contact</p></a>
                 </div>
 
                 <div class="column">

@@ -206,7 +206,7 @@
 
     </style>
     <header>
-        <%@include file="navbar.jsp" %>
+        <%@include file="h&f/navbar.jsp" %>
     </header>
     <body>
         <div class="title">
@@ -289,6 +289,6 @@
 
     </body>
     <footer>
-        <%@include file="footer.jsp" %>
+        <%@include file="h&f/footer.jsp" %>
     </footer>
 </html>
