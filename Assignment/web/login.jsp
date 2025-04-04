@@ -22,7 +22,8 @@
                 min-height: 100vh;
             }
 
-            .login-container {
+            /* Container */
+            .container {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -30,7 +31,8 @@
                 padding: 40px 20px;
             }
 
-            .login-box {
+            /*login box */
+            .box {
                 display: flex;
                 background: white;
                 border-radius: 15px;
@@ -40,7 +42,8 @@
                 max-width: 90%;
             }
 
-            .login-image {
+            /* image */
+            .image {
                 flex: 1;
                 background: #4C60DF;
                 display: flex;
@@ -49,35 +52,37 @@
                 padding: 40px;
             }
 
-            .login-image img {
+            .image img {
                 max-width: 100%;
                 height: auto;
             }
 
-            .login-form {
+            /* form */
+            .form {
                 flex: 1;
                 padding: 50px;
             }
 
-            .login-title {
+            .title {
                 font-size: 28px;
                 font-weight: bold;
                 margin-bottom: 30px;
                 color: #333;
             }
 
-            .form-group {
+            /* detail input */
+            .detail {
                 margin-bottom: 20px;
             }
 
-            .form-group label {
+            .detail label {
                 display: block;
                 margin-bottom: 8px;
                 font-weight: bold;
                 color: #555;
             }
 
-            .form-group input {
+            .detail input {
                 width: 100%;
                 padding: 12px 0px 10px 0px;
                 border: 1px solid #ddd;
@@ -85,25 +90,25 @@
                 font-size: 16px;
             }
 
-            .form-group input:focus {
+            .detail input:focus {
                 outline: none;
                 border-color: #4C60DF;
             }
 
-            .input-with-icon {
+            .icon {
                 position: relative;
                 display: flex;
                 align-items: center;
             }
 
-            .input-with-icon i {
+            .icon i {
                 position: absolute;
                 left: 12px;
                 color: #4C60DF;
                 font-size: 16px;
             }
 
-            .input-with-icon input {
+            .icon input {
                 width: 100%;
                 padding: 12px 12px 12px 40px;
                 border: 1px solid #ddd;
@@ -111,23 +116,24 @@
                 font-size: 16px;
             }
 
-            .input-with-icon input:focus {
+            .icon input:focus {
                 outline: none;
                 border-color: #4C60DF;
             }
 
-            .forgot-password {
+            .forgot-passwd {
                 text-align: right;
                 margin-bottom: 25px;
             }
 
-            .forgot-password a {
+            .forgot-passwd a {
                 color: #4C60DF;
                 text-decoration: none;
                 font-size: 14px;
             }
 
-            .login-button {
+            /* login button */
+            .button {
                 width: 100%;
                 padding: 12px;
                 background-color: #4C60DF;
@@ -142,21 +148,23 @@
                 align-items: center;
             }
 
-            .login-button:hover {
+            .button:hover {
                 background-color: #3a4bb5;
             }
 
-            .signup-link {
+            /* sign up */
+            .signup {
                 text-align: center;
                 margin-bottom: 30px;
             }
 
-            .signup-link a {
+            .signup a {
                 color: #4C60DF;
                 text-decoration: none;
                 font-weight: bold;
             }
 
+            /* social login */
             .social-login {
                 text-align: center;
             }
@@ -211,6 +219,7 @@
                 color: #db4437;
             }
 
+            /* @media */
             @media (max-width: 768px) {
                 .login-box {
                     flex-direction: column;
@@ -230,39 +239,50 @@
         <%@include file="h&f/navbar.jsp" %>
     </header>
     <body>
-        <div class="login-container">
-            <div class="login-box">
-                <div class="login-image">
+        <!-- container -->
+        <div class="container">
+            <!<!-- box -->
+            <div class="box">
+                <!-- image -->
+                <div class="image">
                     <img src="logo/logo_2.png">
                 </div>
-                <div class="login-form">
-                    <h1 class="login-title">Login</h1>
 
-                    <div class="form-group">
+                <!-- form -->
+                <div class="form">
+                    <h1 class="title">Login</h1>
+
+                    <div class="detail">
                         <label for="username">Username</label>
-                        <div class="input-with-icon">
+                        <div class="icon">
                             <i class="fa-solid fa-user"></i>
                             <input type="text" id="username" placeholder="Enter username">
                         </div>
                     </div>
 
-                    <div class="form-group">
+                    <!-- Form Input -->
+                    <div class="detail">
                         <label for="password">Password</label>
-                        <div class="input-with-icon">
+                        <div class="icon">
                             <i class="fa-solid fa-key"></i>
                             <input type="password" id="password" placeholder="Enter password">
                         </div>
                     </div>
-                    <div class="forgot-password">
+
+                    <!-- forgot password -->
+                    <div class="forgot-passwd">
                         <a href="#">Forgot password?</a>
                     </div>
 
-                    <button class="login-button">Login</button>
+                    <!-- login button -->
+                    <button class="button">Login</button>
 
-                    <div class="signup-link">
+                    <!-- sign up -->
+                    <div class="signup">
                         Don't have an account? <a href="signup.jsp">Sign up</a>
                     </div>
 
+                    <!-- social login -->
                     <div class="social-login">
                         <div class="social-title">OR</div>
                         <div class="social-buttons">

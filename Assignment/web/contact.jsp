@@ -26,6 +26,7 @@
                 background-color: #f5f7ff;
             }
 
+            /* title */
             .title {
                 width: 100%;
                 height: 150px;
@@ -65,6 +66,7 @@
                 text-decoration: underline;
             }
 
+            /* form */
             .container {
                 max-width: 1200px;
                 margin: 40px auto;
@@ -127,6 +129,7 @@
                 background: #3a4bb8;
             }
 
+            /* map */
             .map {
                 height: 100%;
                 border-radius: 8px;
@@ -180,6 +183,7 @@
                 font-size: 0.95rem;
             }
 
+            /* @media */
             @media (max-width: 992px) {
                 .info {
                     grid-template-columns: repeat(2, 1fr);
@@ -213,6 +217,7 @@
         <%@include file="h&f/navbar.jsp" %>
     </header>
     <body>
+        <!-- title -->
         <div class="title">
             <h2>Contact</h2>
             <div class="title1">
@@ -221,6 +226,7 @@
             </div>
         </div>
 
+        <!-- form -->
         <div class="container">
             <div class="form">
                 <h3>Contact Form</h3>
@@ -249,10 +255,7 @@
             <!--Maps-->
             <div class="map">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.8000000000006!2d101.7239822!3d3.2152552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc3843bfb6a031%3A0x2dc5e067aae3ab84!2sTunku%20Abdul%20Rahman%20University%20of%20Management%20and%20Technology%20(TAR%20UMT)!5e0!3m2!1sen!2smy!4v1710000000000!5m2!1sen!2smy"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.8000000000006!2d101.7239822!3d3.2152552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc3843bfb6a031%3A0x2dc5e067aae3ab84!2sTunku%20Abdul%20Rahman%20University%20of%20Management%20and%20Technology!5e0!3m2!1sen!2smy!4v1710000000000!5m2!1sen!2smy">
                 </iframe>
             </div>
         </div>

@@ -12,6 +12,7 @@
         <title>Shop Page</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <style>
+            /* color */
             :root {
                 --primary-color: #4C60DF;
                 --secondary-color: #6c757d;
@@ -26,6 +27,7 @@
                 background-color: #f5f7ff;
             }
 
+            /* title */
             .title {
                 width: 100%;
                 height: 150px;
@@ -74,7 +76,8 @@
                 gap: 20px;
             }
 
-            .section {
+            /* filter box */
+            .box {
                 width: 250px;
                 padding: 15px;
                 background: white;
@@ -86,7 +89,7 @@
                 flex-shrink: 0;
             }
 
-            .section h3 {
+            .box h3 {
                 margin-top: 0;
                 color: var(--primary-color);
                 border-bottom: 1px solid #eee;
@@ -97,6 +100,7 @@
                 margin-bottom: 20px;
             }
 
+            /* option for category */
             .option {
                 margin: 8px 0;
                 display: flex;
@@ -110,6 +114,7 @@
                 margin-right: 8px;
             }
 
+            /* price range */
             .range {
                 display: flex;
                 gap: 10px;
@@ -123,6 +128,7 @@
                 border-radius: 4px;
             }
 
+            /* apply button */
             .apply {
                 background: var(--primary-color);
                 color: white;
@@ -138,6 +144,7 @@
                 background: #3a4bb8;
             }
 
+            /* star rating for filter */
             .star-rating {
                 display: flex;
                 gap: 5px;
@@ -185,6 +192,7 @@
                 box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             }
 
+            /* products image */
             .image {
                 width: 100%;
                 height: 300px;
@@ -205,22 +213,26 @@
                 background: white;
             }
 
+            /* products name title */
             .name {
                 font-weight: bold;
                 margin-bottom: 5px;
             }
 
+            /* products price */
             .price {
                 color: var(--primary-color);
                 font-weight: bold;
                 margin-bottom: 10px;
             }
 
+            /* products rating */
             .product-rating {
                 color: #FFD700;
                 margin-bottom: 15px;
             }
 
+            /* add-to-cart button */
             .add-to-cart {
                 width: 100%;
                 padding: 8px;
@@ -236,6 +248,7 @@
                 background: #3a4bb8;
             }
 
+            /* @media */
             @media (max-width: 1200px) {
                 .products-grid {
                     grid-template-columns: repeat(2, 1fr);
@@ -263,6 +276,7 @@
         <%@include file="h&f/navbar.jsp" %>
     </header>
     <body>
+        <!-- title -->
         <div class="title">
             <h2>SHOP</h2>
             <div class="title1">
@@ -273,7 +287,8 @@
 
         <!--Filter-->
         <div class="container">
-            <div class="section">
+            <div class="box">
+                <!-- option for category -->
                 <div class="filter">
                     <h3>Product Category</h3>
                     <div class="option">
@@ -290,6 +305,7 @@
                     </div>
                 </div>
 
+                <!-- price range -->
                 <div class="filter">
                     <h3>Price Range</h3>
                     <div class="range">
@@ -300,6 +316,7 @@
                     <button class="apply">Apply</button>
                 </div>
 
+                <!-- star rating for filter -->
                 <div class="filter">
                     <h3>Rating</h3>
                     <div class="star-rating" id="starContainer">

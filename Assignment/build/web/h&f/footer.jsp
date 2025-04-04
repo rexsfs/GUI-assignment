@@ -10,9 +10,9 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>footer</title>
-    </head>
-    <style>
-        body footer{
+
+        <style>
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -33,6 +33,7 @@
             flex-wrap: wrap;
         }
 
+        /* column size */
         .column {
             width: 25%;
             color: white;
@@ -51,6 +52,7 @@
             height: 60px;
             width: auto;
         }
+
 
         .column h3 {
             color: white;
@@ -85,6 +87,7 @@
             margin: 0;
         }
 
+        /* @media */
         @media (max-width: 768px) {
             .column {
                 width: 50%;
@@ -96,7 +99,9 @@
                 width: 100%;
             }
         }
-    </style>
+        </style>
+    </head>
+
     <body>
         <div class="footer">
             <div class="footer_content">
