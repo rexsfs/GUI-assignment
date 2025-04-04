@@ -22,12 +22,6 @@
                 min-height: 100vh;
             }
 
-            img {
-                border: none !important;
-                outline: none !important;
-                box-shadow: none !important;
-            }
-
             .login-container {
                 display: flex;
                 justify-content: center;
@@ -239,8 +233,7 @@
         <div class="login-container">
             <div class="login-box">
                 <div class="login-image">
-                    <!-- Replace with your logo path -->
-                    <img src="logo/logo.png">
+                    <img src="logo/logo_2.png">
                 </div>
                 <div class="login-form">
                     <h1 class="login-title">Login</h1>

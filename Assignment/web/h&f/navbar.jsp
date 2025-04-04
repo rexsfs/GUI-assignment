@@ -222,8 +222,8 @@
                         <i class="fa fa-times close-icon" id="closeIcon" onclick="closeSearch()"></i>
                     </div>
 
-                    <a href="login.jsp" class="login_signup-btn">Sign Up / Login</a>
-                </div>
+                <a href="login.jsp" class="login_signup-btn">Login / Sign Up</a>
+            </div>
         </div>
 
         <script>

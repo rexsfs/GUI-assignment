@@ -1,16 +1,15 @@
 <%--
-    Document   : login
-    Created on : 3 Apr 2025, 4:20:24 pm
+    Document   : signup
+    Created on : 4 Apr 2025, 4:16:56 pm
     Author     : yjee0
 --%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Login Page</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <title>Sign Up Page</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <style>
             body {
                 font-family: Arial, sans-serif;
@@ -77,19 +76,6 @@
                 color: #555;
             }
 
-            .form-group input {
-                width: 100%;
-                padding: 12px 0px 10px 0px;
-                border: 1px solid #ddd;
-                border-radius: 8px;
-                font-size: 16px;
-            }
-
-            .form-group input:focus {
-                outline: none;
-                border-color: #4C60DF;
-            }
-
             .input-with-icon {
                 position: relative;
                 display: flex;
@@ -116,17 +102,6 @@
                 border-color: #4C60DF;
             }
 
-            .forgot-password {
-                text-align: right;
-                margin-bottom: 25px;
-            }
-
-            .forgot-password a {
-                color: #4C60DF;
-                text-decoration: none;
-                font-size: 14px;
-            }
-
             .login-button {
                 width: 100%;
                 padding: 12px;
@@ -137,78 +112,23 @@
                 font-size: 16px;
                 font-weight: bold;
                 cursor: pointer;
-                margin-bottom: 20px;
+                margin: 20px 0;
                 transition: background-color 0.3s;
-                align-items: center;
             }
 
             .login-button:hover {
                 background-color: #3a4bb5;
             }
 
-            .signup-link {
+            .login-link {
                 text-align: center;
                 margin-bottom: 30px;
             }
 
-            .signup-link a {
+            .login-link a {
                 color: #4C60DF;
                 text-decoration: none;
                 font-weight: bold;
-            }
-
-            .social-login {
-                text-align: center;
-            }
-
-            .social-title {
-                position: relative;
-                margin-bottom: 20px;
-                color: #777;
-            }
-
-            .social-title:before,
-            .social-title:after {
-                content: "";
-                position: absolute;
-                top: 50%;
-                width: 30%;
-                height: 1px;
-                background: #ddd;
-            }
-
-            .social-title:before {
-                left: 0;
-            }
-
-            .social-title:after {
-                right: 0;
-            }
-
-            .social-buttons {
-                display: flex;
-                justify-content: center;
-                gap: 15px;
-            }
-
-            .social-btn {
-                padding: 10px 20px;
-                border: 1px solid #ddd;
-                border-radius: 8px;
-                background: white;
-                cursor: pointer;
-                display: flex;
-                align-items: center;
-                gap: 8px;
-                font-size: 14px;
-            }
-
-            .social-btn.facebook {
-                color: #3b5998;
-            }
-
-            .social-btn.google {
-                color: #db4437;
             }
 
             @media (max-width: 768px) {
@@ -227,7 +147,7 @@
         </style>
     </head>
     <header>
-        <%@include file="h&f/navbar.jsp" %>
+<%@include file="h&f/navbar.jsp" %>
     </header>
     <body>
         <div class="login-container">
@@ -236,7 +156,7 @@
                     <img src="logo/logo_2.png">
                 </div>
                 <div class="login-form">
-                    <h1 class="login-title">Login</h1>
+                    <h1 class="login-title">Sign Up</h1>
 
                     <div class="form-group">
                         <label for="username">Username</label>
@@ -247,38 +167,39 @@
                     </div>
 
                     <div class="form-group">
+                        <label for="email">Email</label>
+                        <div class="input-with-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" id="email" placeholder="Enter email">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
                         <label for="password">Password</label>
                         <div class="input-with-icon">
                             <i class="fa-solid fa-key"></i>
                             <input type="password" id="password" placeholder="Enter password">
                         </div>
                     </div>
-                    <div class="forgot-password">
-                        <a href="#">Forgot password?</a>
-                    </div>
 
-                    <button class="login-button">Login</button>
-
-                    <div class="signup-link">
-                        Don't have an account? <a href="signup.jsp">Sign up</a>
-                    </div>
-
-                    <div class="social-login">
-                        <div class="social-title">OR</div>
-                        <div class="social-buttons">
-                            <button class="social-btn facebook">
-                                <i class="fa fa-facebook"></i> Facebook
-                            </button>
-                            <button class="social-btn google">
-                                <i class="fa fa-google"></i> Google
-                            </button>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <div class="input-with-icon">
+                            <i class="fa-solid fa-key"></i>
+                            <input type="password" id="confirm-password" placeholder="Confirm password">
                         </div>
+                    </div>
+
+                    <button class="login-button">Sign Up</button>
+
+                    <div class="login-link">
+                        Already have an account? <a href="login.jsp">Login</a>
                     </div>
                 </div>
             </div>
         </div>
     </body>
     <footer>
-        <%@include file="h&f/footer.jsp" %>
+<%@include file="h&f/footer.jsp" %>
     </footer>
 </html>

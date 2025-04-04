@@ -1,3 +1,9 @@
+<%--
+    Document   : footer
+    Created on : 31 Mar 2025, 7:43:06 pm
+    Author     : yjee0
+--%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
