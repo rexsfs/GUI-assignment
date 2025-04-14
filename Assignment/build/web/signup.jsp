@@ -3,6 +3,7 @@
     Created on : 4 Apr 2025, 4:16:56 pm
     Author     : yjee0
 --%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -163,6 +164,14 @@
                         <div class="input-with-icon">
                             <i class="fa-solid fa-user"></i>
                             <input type="text" id="username" placeholder="Enter username">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tel">Phone</label>
+                        <div class="input-with-icon">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="tel" id="tel" placeholder="Enter phone number">
                         </div>
                     </div>
 

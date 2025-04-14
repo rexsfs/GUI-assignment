@@ -48,25 +48,6 @@
                 letter-spacing: 1px;
             }
 
-            .title1 {
-                font-size: 1rem;
-                margin-top: 15px;
-                display: flex;
-                gap: 10px;
-                align-items: center;
-            }
-
-            .title1 a {
-                color: rgba(255,255,255,0.9);
-                text-decoration: none;
-                transition: all 0.3s ease;
-            }
-
-            .title1 a:hover {
-                color: white;
-                text-decoration: underline;
-            }
-
             /* filter */
             .container {
                 display: flex;
@@ -279,10 +260,6 @@
         <!-- title -->
         <div class="title">
             <h2>SHOP</h2>
-            <div class="title1">
-                <a href="index.jsp">Home</a> /
-                <a href="shop.jsp">Shop</a>
-            </div>
         </div>
 
         <!--Filter-->

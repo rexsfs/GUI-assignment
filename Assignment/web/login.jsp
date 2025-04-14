@@ -1,10 +1,24 @@
 <%--
     Document   : login
-    Created on : 3 Apr 2025, 4:20:24 pm
+    Created on : 1 Apr 2025, 3:19:40 pm
     Author     : yjee0
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+    if ("POST".equalsIgnoreCase(request.getMethod())) {
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+
+        if (username != null && !username.isEmpty() && password != null && !password.isEmpty()) {
+            session.setAttribute("user", username);
+            response.sendRedirect("index.jsp");
+            return;
+        } else {
+            request.setAttribute("error", "Username and password cannot be empty");
+        }
+    }
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -82,19 +96,6 @@
                 color: #555;
             }
 
-            .detail input {
-                width: 100%;
-                padding: 12px 0px 10px 0px;
-                border: 1px solid #ddd;
-                border-radius: 8px;
-                font-size: 16px;
-            }
-
-            .detail input:focus {
-                outline: none;
-                border-color: #4C60DF;
-            }
-
             .icon {
                 position: relative;
                 display: flex;
@@ -145,7 +146,6 @@
                 cursor: pointer;
                 margin-bottom: 20px;
                 transition: background-color 0.3s;
-                align-items: center;
             }
 
             .button:hover {
@@ -219,17 +219,24 @@
                 color: #db4437;
             }
 
+            /* Error message */
+            .error-message {
+                color: red;
+                margin-bottom: 15px;
+                text-align: center;
+            }
+
             /* @media */
             @media (max-width: 768px) {
-                .login-box {
+                .box {
                     flex-direction: column;
                 }
 
-                .login-image {
+                .image {
                     padding: 30px;
                 }
 
-                .login-form {
+                .form {
                     padding: 30px;
                 }
             }
@@ -252,32 +259,36 @@
                 <div class="form">
                     <h1 class="title">Login</h1>
 
-                    <div class="detail">
-                        <label for="username">Username</label>
-                        <div class="icon">
-                            <i class="fa-solid fa-user"></i>
-                            <input type="text" id="username" placeholder="Enter username">
+                    <% if (request.getAttribute("error") != null) { %>
+                    <div class="error-message">
+                        <%= request.getAttribute("error") %>
+                    </div>
+                    <% } %>
+
+                    <form method="POST">
+                        <div class="detail">
+                            <label for="username">Username</label>
+                            <div class="icon">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" id="username" name="username" placeholder="Enter username" required>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Form Input -->
-                    <div class="detail">
-                        <label for="password">Password</label>
-                        <div class="icon">
-                            <i class="fa-solid fa-key"></i>
-                            <input type="password" id="password" placeholder="Enter password">
+                        <div class="detail">
+                            <label for="password">Password</label>
+                            <div class="icon">
+                                <i class="fa-solid fa-key"></i>
+                                <input type="password" id="password" name="password" placeholder="Enter password" required>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- forgot password -->
-                    <div class="forgot-passwd">
-                        <a href="#">Forgot password?</a>
-                    </div>
+                        <div class="forgot-passwd">
+                            <a href="#">Forgot password?</a>
+                        </div>
 
-                    <!-- login button -->
-                    <button class="button">Login</button>
+                        <button type="submit" class="button">Login</button>
+                    </form>
 
-                    <!-- sign up -->
                     <div class="signup">
                         Don't have an account? <a href="signup.jsp">Sign up</a>
                     </div>
