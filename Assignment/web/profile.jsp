@@ -13,6 +13,7 @@
         <style>
             :root {
                 --primary-color: #4C60DF;
+                --second-color: #3a4bb8;
             }
 
             body {
@@ -47,7 +48,7 @@
                 display: flex;
                 max-width: 1200px;
                 margin: 0 auto;
-                padding: 20px;
+                padding: 40px 20px;
             }
 
             /* sidebar */
@@ -139,7 +140,7 @@
             }
 
             .upload-pic:hover {
-                background-color: #3a4bb8;
+                background-color: var(--second-color);
             }
 
             .upload-pic i {
@@ -188,7 +189,7 @@
             }
 
             .edit:hover {
-                background-color: #3a4bb8;
+                background-color: var(--second-color);
             }
         </style>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
