@@ -26,6 +26,11 @@
         <title>Login Page</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <style>
+            :root {
+                --primary-color: #4C60DF;
+                --second-color: #3a4bb5;
+            }
+
             body {
                 font-family: Arial, sans-serif;
                 background-color: #f5f7ff;
@@ -34,6 +39,27 @@
                 display: flex;
                 flex-direction: column;
                 min-height: 100vh;
+            }
+
+            /* title */
+            .title {
+                width: 100%;
+                height: 150px;
+                background: linear-gradient(135deg, var(--primary-color), #3a4bb8);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                text-align: center;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+
+            .title h2 {
+                margin: 0;
+                font-size: 2.2rem;
+                font-weight: 600;
+                letter-spacing: 1px;
             }
 
             /* Container */
@@ -59,7 +85,7 @@
             /* image */
             .image {
                 flex: 1;
-                background: #4C60DF;
+                background: var(--primary-color);
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -77,7 +103,7 @@
                 padding: 50px;
             }
 
-            .title {
+            .title-form {
                 font-size: 28px;
                 font-weight: bold;
                 margin-bottom: 30px;
@@ -105,7 +131,7 @@
             .icon i {
                 position: absolute;
                 left: 12px;
-                color: #4C60DF;
+                color: var(--primary-color);
                 font-size: 16px;
             }
 
@@ -119,7 +145,7 @@
 
             .icon input:focus {
                 outline: none;
-                border-color: #4C60DF;
+                border-color: var(--primary-color);
             }
 
             .forgot-passwd {
@@ -128,7 +154,7 @@
             }
 
             .forgot-passwd a {
-                color: #4C60DF;
+                color: var(--primary-color);
                 text-decoration: none;
                 font-size: 14px;
             }
@@ -137,7 +163,7 @@
             .button {
                 width: 100%;
                 padding: 12px;
-                background-color: #4C60DF;
+                background-color: var(--primary-color);
                 color: white;
                 border: none;
                 border-radius: 8px;
@@ -149,7 +175,7 @@
             }
 
             .button:hover {
-                background-color: #3a4bb5;
+                background-color: var(--second-color);
             }
 
             /* sign up */
@@ -159,7 +185,7 @@
             }
 
             .signup a {
-                color: #4C60DF;
+                color: var(--primary-color);
                 text-decoration: none;
                 font-weight: bold;
             }
@@ -246,6 +272,11 @@
         <%@include file="h&f/navbar.jsp" %>
     </header>
     <body>
+        <!-- title -->
+        <div class="title">
+            <h2>Login</h2>
+        </div>
+
         <!-- container -->
         <div class="container">
             <!<!-- box -->
@@ -257,7 +288,7 @@
 
                 <!-- form -->
                 <div class="form">
-                    <h1 class="title">Login</h1>
+                    <h1 class="title-form">Login</h1>
 
                     <% if (request.getAttribute("error") != null) { %>
                     <div class="error-message">
