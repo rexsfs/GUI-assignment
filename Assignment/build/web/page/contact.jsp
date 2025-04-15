@@ -195,7 +195,7 @@
         </style>
     </head>
     <header>
-        <%@include file="h&f/navbar.jsp" %>
+        <%@include file="../h&f/navbar.jsp" %>
     </header>
     <body>
         <!-- title -->
@@ -207,7 +207,7 @@
         <div class="container">
             <div class="form">
                 <h3>Contact Form</h3>
-                <form action="processContact.jsp" method="POST">
+                <form action="#" method="POST">
                     <div class="text">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" required>
@@ -263,6 +263,6 @@
         </div>
     </body>
     <footer>
-        <%@include file="h&f/footer.jsp" %>
+        <%@include file="../h&f/footer.jsp" %>
     </footer>
 </html>

@@ -86,7 +86,7 @@
     <%@include file="h&f/navbar.jsp" %>
 </header>
 <body>
-    <img src="pic_homepage/web_image.jpg" class="web_img">
+    <img src="pic/pic_homepage/web_image.jpg" class="web_img">
 
     <!--Categories-->
     <div class="category-section">
@@ -94,17 +94,17 @@
 
         <div class="categories">
             <div class="category-item">
-                <img src="pic_homepage/iem.jpg">
+                <img src="pic/pic_homepage/iem.jpg">
                 <span class="category-name">IEM</span>
             </div>
 
             <div class="category-item">
-                <img src="pic_homepage/mouse.png">
+                <img src="pic/pic_homepage/mouse.png">
                 <span class="category-name">Mouse</span>
             </div>
 
             <div class="category-item">
-                <img src="pic_homepage/keyboard.png">
+                <img src="pic/pic_homepage/keyboard.png">
                 <span class="category-name">Keyboard</span>
             </div>
         </div>

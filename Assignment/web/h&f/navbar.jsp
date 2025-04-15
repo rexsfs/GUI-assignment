@@ -194,15 +194,15 @@
     </head>
     <body>
         <div class="navbar">
-            <a href="index.jsp">
-                <img src="logo/logo.jpg" class="logo">
+            <a href="../index.jsp">
+                <img src="${pageContext.request.contextPath}/pic/logo/logo.jpg" class="logo">
             </a>
 
             <div class="in-navbar">
                 <a href="index.jsp">Home</a>
-                <a href="shop.jsp">Shop</a>
-                <a href="aboutus.jsp">About Us</a>
-                <a href="contact.jsp">Contact</a>
+                <a href="${pageContext.request.contextPath}/page/shop.jsp">Shop</a>
+                <a href="${pageContext.request.contextPath}/page/aboutus.jsp">About Us</a>
+                <a href="${pageContext.request.contextPath}/page/contact.jsp">Contact</a>
 
                 <div class="search-container">
                     <input type="text" class="search-input" placeholder="Search products...">
@@ -216,14 +216,14 @@
                     <div class="user-dropdown">
                         <i class="fas fa-user-circle nav-icon"></i>
                         <div class="dropdown-content">
-                            <a href="profile.jsp">My Profile</a>
+                            <a href="${pageContext.request.contextPath}/page/profile/profile.jsp">My Profile</a>
                             <a href="#">History</a>
                             <a href="?logout=true">Logout</a>
                         </div>
                     </div>
                 </div>
                 <% } else { %>
-                <a href="login.jsp" class="login_signup-btn">Login / Sign Up</a>
+                <a href="${pageContext.request.contextPath}/page/login_signup/login.jsp" class="login_signup-btn">Login / Sign Up</a>
                 <% } %>
             </div>
         </div>

@@ -208,7 +208,7 @@
     </head>
     <body>
         <header>
-            <%@include file="h&f/navbar.jsp" %>
+            <%@include file="../../h&f/navbar.jsp" %>
         </header>
 
         <!-- title -->
@@ -266,7 +266,7 @@
         </div>
 
         <footer>
-            <%@include file="h&f/footer.jsp" %>
+            <%@include file="../../h&f/footer.jsp" %>
         </footer>
 
         <script>

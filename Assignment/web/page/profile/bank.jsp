@@ -230,7 +230,7 @@
     </head>
     <body>
         <header>
-            <%@include file="h&f/navbar.jsp" %>
+            <%@include file="../../h&f/navbar.jsp" %>
         </header>
 
         <!-- title -->
@@ -242,9 +242,9 @@
             <div class="account-sidebar">
                 <h3>My Account</h3>
                 <ul>
-                    <li><a href="profile.jsp">Profile</a></li>
-                    <li><a href="address.jsp">Address</a></li>
-                    <li><a href="bank.jsp" class="active">Bank & Card</a></li>
+                    <li><a href="${pageContext.request.contextPath}/page/profile/profile.jsp">Profile</a></li>
+                    <li><a href="${pageContext.request.contextPath}/page/profile/address.jsp">Address</a></li>
+                    <li><a href="${pageContext.request.contextPath}/page/profile/bank.jsp" class="active">Bank & Card</a></li>
                     <li><a href="#">History</a></li>
                 </ul>
             </div>
@@ -293,7 +293,7 @@
         </div>
 
         <footer>
-            <%@include file="h&f/footer.jsp" %>
+            <%@include file="../../h&f/footer.jsp" %>
         </footer>
     </body>
 </html>
