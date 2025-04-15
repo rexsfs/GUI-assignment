@@ -108,7 +108,7 @@
                 margin-bottom: 20px;
             }
 
-            .profile-header {
+            .header {
                 display: flex;
                 align-items: center;
                 margin-bottom: 30px;
@@ -230,7 +230,7 @@
 
             <!-- content of avatar -->
             <div class="content">
-                <div class="profile-header">
+                <div class="header">
                     <div class="avatar">
                         <img src="../../jeramy.jpg" alt="Avatar" class="pic" id="userAvatar">
                         <!-- upload pic -->

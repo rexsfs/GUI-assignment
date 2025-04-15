@@ -67,24 +67,24 @@
             .form h3 {
                 color: var(--primary-color);
                 margin-top: 0;
-                margin-bottom: 20px;
+                margin: 0 0 20px 5px;
                 font-size: 1.5rem;
             }
 
             .text {
-                margin-bottom: 20px;
+                margin: 0 0 20px 5px;
             }
 
             .text label {
                 display: block;
-                margin-bottom: 8px;
+                margin: 0 0 8px 5px;
                 font-weight: bold;
             }
 
             .text input,
             .text textarea {
                 width: 100%;
-                padding: 10px;
+                padding: 10px 5px 10px 0;
                 border: 1px solid #ddd;
                 border-radius: 4px;
                 font-size: 1rem;

@@ -104,21 +104,21 @@
                 box-shadow: 0 0 5px rgba(0,0,0,0.1);
             }
 
-            .history-header {
+            /* filter */
+            .header-status {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 margin-bottom: 30px;
             }
 
-            .history-header h2 {
+            .header-status h2 {
                 margin: 0;
                 font-size: 24px;
             }
 
             .filter {
                 display: flex;
-                gap: 10px;
             }
 
             .filter select {
@@ -128,7 +128,7 @@
             }
 
             /* Order Cards */
-            .order-card {
+            .card {
                 border: 1px solid #ddd;
                 border-radius: 8px;
                 padding: 20px;
@@ -136,7 +136,7 @@
                 background-color: var(--secondary-color);
             }
 
-            .order-header {
+            .header {
                 display: flex;
                 justify-content: space-between;
                 margin-bottom: 15px;
@@ -144,16 +144,16 @@
                 border-bottom: 1px solid #eee;
             }
 
-            .order-id {
+            .id {
                 font-weight: bold;
                 color: var(--primary-color);
             }
 
-            .order-date {
+            .date {
                 color: #666;
             }
 
-            .order-status {
+            .status {
                 padding: 4px 10px;
                 border-radius: 4px;
                 font-size: 12px;
@@ -175,33 +175,33 @@
                 color: #c62828;
             }
 
-            .order-details {
+            .details {
                 display: flex;
                 gap: 20px;
                 margin-bottom: 15px;
             }
 
-            .order-image {
+            .image {
                 width: 80px;
                 height: 80px;
                 object-fit: cover;
                 border-radius: 4px;
             }
 
-            .order-info {
+            .info {
                 flex: 1;
             }
 
-            .order-product-name {
+            .name {
                 font-weight: bold;
                 margin-bottom: 5px;
             }
 
-            .order-price {
+            .price {
                 color: #666;
             }
 
-            .order-actions {
+            .actions {
                 display: flex;
                 justify-content: flex-end;
                 gap: 10px;
@@ -232,7 +232,7 @@
                 transform: translateY(-2px);
             }
 
-            .no-orders {
+            .empty {
                 text-align: center;
                 padding: 40px;
                 color: #666;
@@ -261,17 +261,11 @@
                 </ul>
             </div>
 
-            <!-- History Content -->
+            <!-- content -->
             <div class="content">
-                <div class="history-header">
+                <div class="header-status">
                     <h2>My Orders</h2>
                     <div class="filter">
-                        <select>
-                            <option>All Orders</option>
-                            <option>Last 30 Days</option>
-                            <option>Last 6 Months</option>
-                            <option>2025</option>
-                        </select>
                         <select>
                             <option>All Status</option>
                             <option>Completed</option>
@@ -281,33 +275,32 @@
                     </div>
                 </div>
 
-                <!-- Sample Order 1 -->
-                <div class="order-card">
-                    <div class="order-header">
+                <!-- order display sample -->
+                <div class="card">
+                    <div class="header">
                         <div>
-                            <span class="order-id">Order #12345</span>
-                            <span class="order-date">• 12 April 2025</span>
+                            <span class="id">Order #12345</span>
+                            <span class="date">• 12 April 2025</span>
                         </div>
-                        <span class="order-status status-completed">Completed</span>
+                        <span class="status status-completed">Completed</span>
                     </div>
 
-                    <div class="order-details">
-                        <img src="pic/jeramy.jpeg" alt="Product Image" class="order-image">
-                        <div class="order-info">
-                            <div class="order-product-name">Wireless Bluetooth Headphones</div>
-                            <div class="order-price">$99.99 × 1</div>
+                    <div class="details">
+                        <img src="pic/jeramy.jpeg" alt="Product Image" class="image">
+                        <div class="info">
+                            <div class="name">Wireless Bluetooth Headphones</div>
+                            <div class="price">$99.99 × 1</div>
                         </div>
                     </div>
 
-                    <div class="order-actions">
-                        <button class="btn btn-outline">Track Order</button>
+                    <div class="actions">
                         <button class="btn btn-primary">Buy Again</button>
                     </div>
                 </div>
 
-                <!-- Empty State (uncomment if needed) -->
+                <!-- empty state sample -->
                 <!--
-                <div class="no-orders">
+                <div class="empty">
                     <h3>No orders yet</h3>
                     <p>You haven't placed any orders. Start shopping now!</p>
                     <button class="btn btn-primary" style="margin-top: 15px;">Shop Now</button>

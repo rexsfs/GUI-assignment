@@ -104,18 +104,19 @@
                 box-shadow: 0 0 5px rgba(0,0,0,0.1);
             }
 
-            .address-header {
+            .header {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 margin-bottom: 30px;
             }
 
-            .address-header h2 {
+            .header h2 {
                 margin: 0;
                 font-size: 24px;
             }
 
+            /* edit button */
             .edit {
                 background-color: var(--primary-color);
                 color: white;
@@ -134,7 +135,8 @@
                 border: #4C60DF 2px solid;
             }
 
-            .address-card {
+            /* address display */
+            .card {
                 border: 1px solid #ddd;
                 border-radius: 5px;
                 padding: 20px;
@@ -142,17 +144,37 @@
                 background-color: var(--secondary-color);
             }
 
-            .address-card h3 {
+            .card h3 {
                 margin-top: 0;
                 margin-bottom: 15px;
                 font-size: 18px;
             }
 
-            .address-card p {
+            .card p {
                 margin: 5px 0;
                 line-height: 1.5;
             }
 
+            .empty-state {
+                text-align: center;
+                padding: 50px 20px;
+                color: #666;
+            }
+
+            .empty-state i {
+                font-size: 48px;
+                color: #ddd;
+                margin-bottom: 20px;
+            }
+
+            .empty-state h3 {
+                color: #444;
+                margin-bottom: 10px;
+            }
+
+            .empty-state p {
+                margin-bottom: 20px;
+            }
         </style>
     </head>
     <body>
@@ -166,7 +188,7 @@
         </div>
 
         <div class="container">
-            <!-- Sidebar Navigation -->
+            <!-- sidebar  -->
             <div class="sidebar">
                 <h3>My Account</h3>
                 <ul>
@@ -177,14 +199,16 @@
                 </ul>
             </div>
 
-            <!-- Address Content -->
+            <!-- content -->
             <div class="content">
-                <div class="address-header">
+                <div class="header">
                     <h2>My Address</h2>
                     <button class="edit">Edit</button>
                 </div>
 
-                <div class="address-card">
+                <!-- address display sample -->
+                <!--
+                <div class="card">
                     <h3>Home Address</h3>
                     <p>Jeramy</p>
                     <p>123 Main Street</p>
@@ -192,6 +216,13 @@
                     <p>New York, NY 10001</p>
                     <p>United States</p>
                     <p>Phone: +60 123456789</p>
+                </div>
+                -->
+
+                <div class="empty-state">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>No Saved Addresses</h3>
+                    <p>You haven't added any addresses yet. Add your first address to get started.</p>
                 </div>
             </div>
         </div>
