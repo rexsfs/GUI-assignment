@@ -170,10 +170,10 @@
             <div class="sidebar">
                 <h3>My Account</h3>
                 <ul>
-                    <li><a href="${pageContext.request.contextPath}/page/profile/profile.jsp">Profile</a></li>
-                    <li><a href="${pageContext.request.contextPath}/page/profile/address.jsp" class="active">Address</a></li>
-                    <li><a href="${pageContext.request.contextPath}/page/profile/bank.jsp">Bank & Card</a></li>
-                    <li><a href="#">History</a></li>
+                    <li><a href="profile.jsp">Profile</a></li>
+                    <li><a href="address.jsp" class="active">Address</a></li>
+                    <li><a href="bank.jsp">Bank & Card</a></li>
+                    <li><a href="history.jsp">History</a></li>
                 </ul>
             </div>
 

@@ -194,12 +194,12 @@
     </head>
     <body>
         <div class="navbar">
-            <a href="../index.jsp">
+            <a href="${pageContext.request.contextPath}/../index.jsp">
                 <img src="${pageContext.request.contextPath}/pic/logo/logo.jpg" class="logo">
             </a>
 
             <div class="in-navbar">
-                <a href="index.jsp">Home</a>
+                <a href="${pageContext.request.contextPath}/index.jsp">Home</a>
                 <a href="${pageContext.request.contextPath}/page/shop.jsp">Shop</a>
                 <a href="${pageContext.request.contextPath}/page/aboutus.jsp">About Us</a>
                 <a href="${pageContext.request.contextPath}/page/contact.jsp">Contact</a>
@@ -218,7 +218,7 @@
                         <div class="dropdown-content">
                             <a href="${pageContext.request.contextPath}/page/profile/profile.jsp">My Profile</a>
                             <a href="#">History</a>
-                            <a href="?logout=true">Logout</a>
+                            <a href="${pageContext.request.contextPath}/index.jsp?logout=true">Logout</a>
                         </div>
                     </div>
                 </div>
@@ -231,7 +231,7 @@
         <%
             if (request.getParameter("logout") != null) {
                 session.invalidate();
-                response.sendRedirect("index.jsp");
+                response.sendRedirect(request.getContextPath() + "/index.jsp");
                 return;
             }
         %>

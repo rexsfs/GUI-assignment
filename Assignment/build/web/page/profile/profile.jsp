@@ -224,7 +224,7 @@
                     <li><a href="profile.jsp" class="active">Profile</a></li>
                     <li><a href="address.jsp">Address</a></li>
                     <li><a href="bank.jsp">Bank & Card</a></li>
-                    <li><a href="#">History</a></li>
+                    <li><a href="history.jsp">History</a></li>
                 </ul>
             </div>
 
@@ -232,7 +232,7 @@
             <div class="content">
                 <div class="profile-header">
                     <div class="avatar">
-                        <img src="jeramy.jpg" alt="Avatar" class="pic" id="userAvatar">
+                        <img src="../../jeramy.jpg" alt="Avatar" class="pic" id="userAvatar">
                         <!-- upload pic -->
                         <div class="upload-pic" title="Change photo">
                             <i class="fas fa-camera"></i>

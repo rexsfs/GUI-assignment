@@ -142,6 +142,80 @@
                 margin-right: 8px;
             }
 
+            /* Card Styles */
+            .card-list {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 20px;
+            }
+
+            .card-item {
+                border: 1px solid #ddd;
+                border-radius: 10px;
+                padding: 20px;
+                position: relative;
+                background: linear-gradient(135deg, #4C60DF, #3a4bb8);
+                color: white;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            }
+
+            .card-item.mastercard {
+                background: linear-gradient(135deg, #f46b45, #eea849);
+            }
+
+            .card-item .card-type {
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                font-size: 24px;
+            }
+
+            .card-item .card-number {
+                font-size: 18px;
+                letter-spacing: 1px;
+                margin: 30px 0 15px;
+                font-family: 'Courier New', monospace;
+            }
+
+            .card-item .card-details {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .card-item .card-label {
+                font-size: 12px;
+                opacity: 0.8;
+                margin-bottom: 5px;
+            }
+
+            .card-item .card-actions {
+                margin-top: 20px;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .card-item .card-actions button {
+                background: rgba(255,255,255,0.2);
+                border: none;
+                color: white;
+                padding: 8px 12px;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: all 0.3s;
+            }
+
+            .card-item .card-actions button:hover {
+                background: rgba(255,255,255,0.3);
+            }
+
+            .card-item .card-actions button.delete {
+                background: rgba(231, 76, 60, 0.8);
+            }
+
+            .card-item .card-actions button.delete:hover {
+                background: rgba(231, 76, 60, 1);
+            }
+
             .empty-state {
                 text-align: center;
                 padding: 50px 20px;
@@ -163,111 +237,43 @@
                 margin-bottom: 20px;
             }
 
-            /* Card Styles (when cards exist) */
-            .card-list {
-                display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-                gap: 20px;
-            }
-
-            .card-item {
-                border: 1px solid #ddd;
-                border-radius: 10px;
-                padding: 20px;
-                position: relative;
-                background: linear-gradient(135deg, #4C60DF, #3a4bb8);
-                color: white;
-            }
-
-            .card-item .card-type {
-                position: absolute;
-                right: 20px;
-                top: 20px;
-                font-size: 24px;
-            }
-
-            .card-item .card-number {
-                font-size: 18px;
-                letter-spacing: 1px;
-                margin: 30px 0 15px;
-            }
-
-            .card-item .card-details {
-                display: flex;
-                justify-content: space-between;
-            }
-
-            .card-item .card-actions {
-                margin-top: 20px;
-                display: flex;
-                justify-content: space-between;
-            }
-
-            .card-item .card-actions button {
-                background: rgba(255,255,255,0.2);
-                border: none;
-                color: white;
-                padding: 5px 10px;
-                border-radius: 4px;
-                cursor: pointer;
-            }
-
-            .card-item .card-actions button.delete {
-                background: rgba(231, 76, 60, 0.8);
-            }
-
-            .default-badge {
-                display: inline-block;
-                background-color: white;
-                color: var(--primary-color);
-                padding: 3px 8px;
-                border-radius: 3px;
-                font-size: 12px;
-                margin-left: 10px;
-            }
         </style>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     </head>
     <body>
         <header>
-            <%@include file="../../h&f/navbar.jsp" %>
+<%@include file="../../h&f/navbar.jsp" %>
         </header>
 
         <!-- title -->
         <div class="title">
-            <h2>Address</h2>
+            <h2>Bank & Cards</h2>
         </div>
         <div class="account-container">
             <!-- Sidebar Navigation -->
             <div class="account-sidebar">
                 <h3>My Account</h3>
                 <ul>
-                    <li><a href="${pageContext.request.contextPath}/page/profile/profile.jsp">Profile</a></li>
-                    <li><a href="${pageContext.request.contextPath}/page/profile/address.jsp">Address</a></li>
-                    <li><a href="${pageContext.request.contextPath}/page/profile/bank.jsp" class="active">Bank & Card</a></li>
-                    <li><a href="#">History</a></li>
+                    <li><a href="profile.jsp">Profile</a></li>
+                    <li><a href="address.jsp">Address</a></li>
+                    <li><a href="bank.jsp" class="active">Bank & Card</a></li>
+                    <li><a href="history.jsp">History</a></li>
                 </ul>
             </div>
 
             <!-- Card Content -->
             <div class="card-content">
                 <div class="card-header">
-                    <h2>Credit / Debit Card</h2>
+                    <h2>Credit / Debit Cards</h2>
                     <button class="add-card-btn">
                         <i class="fas fa-plus"></i> Add New Card
                     </button>
                 </div>
 
-                <!-- Empty State -->
-                <div class="empty-state">
-                    <i class="far fa-credit-card"></i>
-                    <h3>You don't have cards yet.</h3>
-                    <p>Add your credit or debit card to make payments easier.</p>
-                </div>
-
-                <!-- Card List (hidden when empty) -->
-                <div class="card-list" style="display: none;">
-                    <!-- Example Card (hidden by default) -->
+                <!-- Card List with Sample Cards -->
+                <div class="card-list">
+                    <!-- Visa Card (Default) -->
+                    <!--
                     <div class="card-item">
                         <div class="card-type">
                             <i class="fab fa-cc-visa"></i>
@@ -276,7 +282,7 @@
                         <div class="card-details">
                             <div>
                                 <div class="card-label">Card Holder</div>
-                                <div>John Doe</div>
+                                <div>John Doe <span class="default-badge">DEFAULT</span></div>
                             </div>
                             <div>
                                 <div class="card-label">Expires</div>
@@ -284,16 +290,48 @@
                             </div>
                         </div>
                         <div class="card-actions">
+                            <button disabled>Default Card</button>
+                            <button class="delete">Delete</button>
+                        </div>
+                    </div>
+                    -->
+
+                    <!-- Mastercard -->
+                    <!--
+                    <div class="card-item mastercard">
+                        <div class="card-type">
+                            <i class="fab fa-cc-mastercard"></i>
+                        </div>
+                        <div class="card-number">•••• •••• •••• 5555</div>
+                        <div class="card-details">
+                            <div>
+                                <div class="card-label">Card Holder</div>
+                                <div>John Doe</div>
+                            </div>
+                            <div>
+                                <div class="card-label">Expires</div>
+                                <div>09/24</div>
+                            </div>
+                        </div>
+                        <div class="card-actions">
                             <button>Set as Default</button>
                             <button class="delete">Delete</button>
                         </div>
                     </div>
+                    -->
+                </div>
+
+                <!-- Empty State -->
+                <div class="empty-state">
+                    <i class="far fa-credit-card"></i>
+                    <h3>You don't have cards yet.</h3>
+                    <p>Add your credit or debit card to make payments easier.</p>
                 </div>
             </div>
         </div>
 
         <footer>
-            <%@include file="../../h&f/footer.jsp" %>
+<%@include file="../../h&f/footer.jsp" %>
         </footer>
     </body>
 </html>
