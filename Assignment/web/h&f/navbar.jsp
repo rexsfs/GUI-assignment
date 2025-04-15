@@ -217,6 +217,7 @@
                         <i class="fas fa-user-circle nav-icon"></i>
                         <div class="dropdown-content">
                             <a href="profile.jsp">My Profile</a>
+                            <a href="#">History</a>
                             <a href="?logout=true">Logout</a>
                         </div>
                     </div>

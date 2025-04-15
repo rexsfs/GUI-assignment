@@ -13,7 +13,7 @@
         <style>
             :root {
                 --primary-color: #4C60DF;
-                --second-color: #3a4bb8;
+                --secondary-color: #f8f9fa;
             }
 
             body {
@@ -80,12 +80,18 @@
                 color: #333;
                 text-decoration: none;
                 display: block;
-                padding: 8px 0;
+                padding: 8px 10px;
+                border-radius: 4px;
             }
 
             .sidebar a.active {
-                color: #007bff;
+                color: var(--primary-color);
+                background-color: var(--secondary-color);
                 font-weight: bold;
+            }
+
+            .sidebar a:hover:not(.active) {
+                background-color: #f0f0f0;
             }
 
             /* content */
@@ -140,7 +146,10 @@
             }
 
             .upload-pic:hover {
-                background-color: var(--second-color);
+                transform: none;
+                background: #fff;
+                color: #4C60DF;
+                border: #4C60DF 2px solid;
             }
 
             .upload-pic i {
@@ -182,14 +191,17 @@
                 color: white;
                 border: none;
                 padding: 10px 20px;
-                border-radius: 4px;
+                border-radius: 8px;
                 cursor: pointer;
                 font-size: 14px;
                 transition: background-color 0.3s;
             }
 
             .edit:hover {
-                background-color: var(--second-color);
+                transform: none;
+                background: #fff;
+                color: #4C60DF;
+                border: #4C60DF 2px solid;
             }
         </style>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -210,8 +222,8 @@
                 <h3>My Account</h3>
                 <ul>
                     <li><a href="profile.jsp" class="active">Profile</a></li>
-                    <li><a href="#">Address</a></li>
-                    <li><a href="#">Bank & Card</a></li>
+                    <li><a href="address.jsp">Address</a></li>
+                    <li><a href="bank.jsp">Bank & Card</a></li>
                     <li><a href="#">History</a></li>
                 </ul>
             </div>
@@ -228,7 +240,7 @@
                         </div>
                     </div>
                     <div class="Info">
-                        <div class="name">John Doe</div>
+                        <div class="name">Jeramy</div>
                         <button class="edit">Edit Profile</button>
                     </div>
                 </div>
