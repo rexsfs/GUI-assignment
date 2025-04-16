@@ -32,7 +32,7 @@
                         <i class="fas fa-user-circle nav-icon"></i>
                         <div class="dropdown-content">
                             <a href="${pageContext.request.contextPath}/page/profile/profile.jsp">My Profile</a>
-                            <a href="#">History</a>
+                            <a href="${pageContext.request.contextPath}/page/profile/history.jsp">History</a>
                             <a href="${pageContext.request.contextPath}/index.jsp?logout=true">Logout</a>
                         </div>
                     </div>
