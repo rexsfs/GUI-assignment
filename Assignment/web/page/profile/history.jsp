@@ -13,6 +13,8 @@
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/h&f/title.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/page/profile/history.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/page/body.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/page/profile/sidebar.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/page/profile/empty_status.css">
     </head>
     <header>
         <%@include file="../../h&f/navbar.jsp"%>
@@ -75,7 +77,7 @@
                 -->
 
                 <!-- empty state sample -->
-                <div class="empty">
+                <div class="empty-status">
                     <h3>No orders yet</h3>
                     <p>You haven't placed any orders. Start shopping now!</p>
                     <button class="btn btn-primary" style="margin-top: 15px;">Shop Now</button>

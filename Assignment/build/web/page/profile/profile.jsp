@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/h&f/title.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/page/profile/profile.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/page/body.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/page/profile/sidebar.css">
     </head>
     <header>
         <%@include file="../../h&f/navbar.jsp" %>

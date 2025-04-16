@@ -20,49 +20,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
     padding: 0 20px;
 }
 
-/* Sidebar */
-.sidebar {
-    width: 250px;
-    background: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    margin-right: 20px;
-}
-
-.sidebar h3 {
-    margin-top: 0;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #eee;
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar li {
-    margin-bottom: 10px;
-}
-
-.sidebar a {
-    color: #333;
-    text-decoration: none;
-    display: block;
-    padding: 8px 10px;
-    border-radius: 4px;
-}
-
-.sidebar a.active {
-    color: var(--primary-color);
-    background-color: var(--secondary-color);
-    font-weight: bold;
-}
-
-.sidebar a:hover:not(.active) {
-    background-color: #f0f0f0;
-}
-
 /* History Content */
 .content {
     flex: 1;
@@ -198,10 +155,4 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
 .btn:hover {
     opacity: 0.9;
     transform: translateY(-2px);
-}
-
-.empty {
-    text-align: center;
-    padding: 40px;
-    color: #666;
 }

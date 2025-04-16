@@ -14,6 +14,8 @@
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/h&f/title.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/page/profile/bank.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/page/body.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/page/profile/sidebar.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/page/profile/empty_status.css">
     </head>
     <header>
         <%@include file="../../h&f/navbar.jsp" %>
@@ -47,6 +49,7 @@
                 <!-- card list sample -->
                 <div class="list">
                     <!-- Visa Card -->
+                    <!--
                     <div class="card">
                         <div class="type">
                             <i class="fab fa-cc-visa"></i>
@@ -66,15 +69,14 @@
                             <button class="delete">Delete</button>
                         </div>
                     </div>
+                    -->
+                </div>
 
                 <!-- empty state sample -->
-                <!--
-                <div class="empty">
+                <div class="empty-status">
                     <i class="far fa-credit-card"></i>
                     <h3>You don't have cards yet.</h3>
                     <p>Add your credit or debit card to make payments easier.</p>
-                </div>
-                -->
                 </div>
             </div>
         </div>

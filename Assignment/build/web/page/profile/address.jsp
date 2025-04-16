@@ -13,6 +13,8 @@
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/h&f/title.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/page/profile/address.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/page/body.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/page/profile/sidebar.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/page/profile/empty_status.css">
     </head>
     <header>
         <%@include file="../../h&f/navbar.jsp" %>
@@ -55,7 +57,7 @@
                 </div>
                 -->
 
-                <div class="empty-state">
+                <div class="empty-status">
                     <i class="fas fa-map-marker-alt"></i>
                     <h3>No Saved Addresses</h3>
                     <p>You haven't added any addresses yet. Add your first address to get started.</p>
