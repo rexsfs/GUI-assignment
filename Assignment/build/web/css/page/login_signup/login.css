@@ -12,13 +12,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
     --second-color: #3a4bb5;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
-}
-
 /* Container */
 .container {
     display: flex;

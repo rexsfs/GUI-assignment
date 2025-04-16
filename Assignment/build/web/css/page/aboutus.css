@@ -14,15 +14,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
     --dark-color: #343a40;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: var(--dark-color);
-    background-color: #f5f7ff;
-}
-
 /* container */
 .container {
     max-width: 1000px;

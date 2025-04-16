@@ -9,9 +9,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>My Address</title>
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/h&f/title.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/page/profile/address.css">
-        <title>My Address</title>
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/page/body.css">
     </head>
     <header>
         <%@include file="../../h&f/navbar.jsp" %>

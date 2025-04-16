@@ -12,14 +12,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
     --second-color: #3a4bb5;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-}
-
-/* Success message popup */
+/* success message popup */
 .popup {
     position: fixed;
     top: 50%;
