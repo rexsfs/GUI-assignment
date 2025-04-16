@@ -159,10 +159,6 @@
                 box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             }
 
-            .card.mastercard {
-                background: linear-gradient(135deg, #f46b45, #eea849);
-            }
-
             .card .type {
                 position: absolute;
                 right: 20px;
@@ -240,11 +236,10 @@
         </style>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     </head>
+    <header>
+        <%@include file="../../h&f/navbar.jsp" %>
+    </header>
     <body>
-        <header>
-<%@include file="../../h&f/navbar.jsp" %>
-        </header>
-
         <!-- title -->
         <div class="title">
             <h2>Bank & Cards</h2>
@@ -293,28 +288,6 @@
                         </div>
                     </div>
 
-                    <!-- Mastercard -->
-                    <div class="card mastercard">
-                        <div class="type">
-                            <i class="fab fa-cc-mastercard"></i>
-                        </div>
-                        <div class="number">•••• •••• •••• 5555</div>
-                        <div class="details">
-                            <div>
-                                <div class="label">Card Holder</div>
-                                <div>John Doe</div>
-                            </div>
-                            <div>
-                                <div class="label">Expires</div>
-                                <div>09/24</div>
-                            </div>
-                        </div>
-                        <div class="actions">
-                            <button class="delete">Delete</button>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- empty state sample -->
                 <!--
                 <div class="empty">
@@ -323,11 +296,11 @@
                     <p>Add your credit or debit card to make payments easier.</p>
                 </div>
                 -->
+                </div>
             </div>
         </div>
-
-        <footer>
-<%@include file="../../h&f/footer.jsp" %>
-        </footer>
     </body>
+    <footer>
+        <%@include file="../../h&f/footer.jsp" %>
+    </footer>
 </html>

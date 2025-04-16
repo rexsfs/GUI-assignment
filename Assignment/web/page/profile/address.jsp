@@ -177,11 +177,10 @@
             }
         </style>
     </head>
+    <header>
+        <%@include file="../../h&f/navbar.jsp" %>
+    </header>
     <body>
-        <header>
-            <%@include file="../../h&f/navbar.jsp" %>
-        </header>
-
         <!-- title -->
         <div class="title">
             <h2>Address</h2>
@@ -226,9 +225,8 @@
                 </div>
             </div>
         </div>
-
-        <footer>
-            <%@include file="../../h&f/footer.jsp" %>
-        </footer>
     </body>
+    <footer>
+        <%@include file="../../h&f/footer.jsp" %>
+    </footer>
 </html>

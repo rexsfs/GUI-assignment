@@ -206,11 +206,10 @@
         </style>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     </head>
+    <header>
+        <%@include file="../../h&f/navbar.jsp" %>
+    </header>
     <body>
-        <header>
-            <%@include file="../../h&f/navbar.jsp" %>
-        </header>
-
         <!-- title -->
         <div class="title">
             <h2>Profile</h2>
@@ -264,11 +263,6 @@
                 </div>
             </div>
         </div>
-
-        <footer>
-            <%@include file="../../h&f/footer.jsp" %>
-        </footer>
-
         <script>
             document.querySelector('.upload-pic').addEventListener('click', function () {
                 document.getElementById('avatarInput').click();
@@ -287,4 +281,7 @@
             });
         </script>
     </body>
+    <footer>
+        <%@include file="../../h&f/footer.jsp" %>
+    </footer>
 </html>

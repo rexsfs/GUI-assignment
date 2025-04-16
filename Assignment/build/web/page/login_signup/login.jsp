@@ -12,6 +12,7 @@
 
         if (username != null && !username.isEmpty() && password != null && !password.isEmpty()) {
             session.setAttribute("user", username);
+            session.setAttribute("loginSuccess", "true");
             response.sendRedirect("../../index.jsp");
             return;
         } else {
@@ -33,12 +34,9 @@
 
             body {
                 font-family: Arial, sans-serif;
-                background-color: #f5f7ff;
+                background-color: #f5f5f5;
                 margin: 0;
                 padding: 0;
-                display: flex;
-                flex-direction: column;
-                min-height: 100vh;
             }
 
             /* title */
@@ -159,6 +157,11 @@
                 font-size: 14px;
             }
 
+            .forgot-passwd a:hover {
+                color: var(--secondary-color);
+                text-decoration: underline;
+            }
+
             /* login button */
             .button {
                 width: 100%;
@@ -175,10 +178,13 @@
             }
 
             .button:hover {
-                background-color: var(--second-color);
+                transform: none;
+                background: #fff;
+                color: var(--primary-color);
+                border: #4C60DF 2px solid;
             }
 
-            /* sign up */
+            /* go to sign up page */
             .signup {
                 text-align: center;
                 margin-bottom: 30px;
@@ -190,66 +196,9 @@
                 font-weight: bold;
             }
 
-            /* social login */
-            .social-login {
-                text-align: center;
-            }
-
-            .social-title {
-                position: relative;
-                margin-bottom: 20px;
-                color: #777;
-            }
-
-            .social-title:before,
-            .social-title:after {
-                content: "";
-                position: absolute;
-                top: 50%;
-                width: 30%;
-                height: 1px;
-                background: #ddd;
-            }
-
-            .social-title:before {
-                left: 0;
-            }
-
-            .social-title:after {
-                right: 0;
-            }
-
-            .social-buttons {
-                display: flex;
-                justify-content: center;
-                gap: 15px;
-            }
-
-            .social-btn {
-                padding: 10px 20px;
-                border: 1px solid #ddd;
-                border-radius: 8px;
-                background: white;
-                cursor: pointer;
-                display: flex;
-                align-items: center;
-                gap: 8px;
-                font-size: 14px;
-            }
-
-            .social-btn.facebook {
-                color: #3b5998;
-            }
-
-            .social-btn.google {
-                color: #db4437;
-            }
-
-            /* Error message */
-            .error-message {
-                color: red;
-                margin-bottom: 15px;
-                text-align: center;
+            .signup a:hover {
+                color: var(--second-color);
+                text-decoration: underline;
             }
 
             /* @media */
@@ -283,12 +232,12 @@
             <div class="box">
                 <!-- image -->
                 <div class="image">
-                    <img src="${pageContext.request.contextPath}/logo/logo_2.png">
+                    <img src="${pageContext.request.contextPath}/pic/logo/logo_2.png">
                 </div>
 
                 <!-- form -->
                 <div class="form">
-                    <h1 class="title-form">Login</h1>
+                    <h1 class="login-title">Login</h1>
 
                     <% if (request.getAttribute("error") != null) { %>
                     <div class="error-message">
@@ -314,27 +263,15 @@
                         </div>
 
                         <div class="forgot-passwd">
-                            <a href="#">Forgot password?</a>
+                            <a href="forgot_password.jsp">Forgot password?</a>
                         </div>
 
                         <button type="submit" class="button">Login</button>
                     </form>
 
+                    <!-- go to sign up page -->
                     <div class="signup">
-                        Don't have an account? <a href="${pageContext.request.contextPath}/page/login_signup/signup.jsp">Sign up</a>
-                    </div>
-
-                    <!-- social login -->
-                    <div class="social-login">
-                        <div class="social-title">OR</div>
-                        <div class="social-buttons">
-                            <button class="social-btn facebook">
-                                <i class="fa fa-facebook"></i> Facebook
-                            </button>
-                            <button class="social-btn google">
-                                <i class="fa fa-google"></i> Google
-                            </button>
-                        </div>
+                        Don't have an account? <a href="signup.jsp">Sign up</a>
                     </div>
                 </div>
             </div>

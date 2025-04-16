@@ -239,12 +239,11 @@
             }
         </style>
     </head>
+    <header>
+        <%@include file="../../h&f/navbar.jsp"%>
+    </header>
     <body>
-        <header>
-            <%@include file="../../h&f/navbar.jsp"%>
-        </header>
-
-        <!-- Title Section -->
+        <!-- title -->
         <div class="title">
             <h2>Order History</h2>
         </div>
@@ -276,6 +275,7 @@
                 </div>
 
                 <!-- order display sample -->
+                <!--
                 <div class="card">
                     <div class="header">
                         <div>
@@ -297,20 +297,18 @@
                         <button class="btn btn-primary">Buy Again</button>
                     </div>
                 </div>
+                -->
 
                 <!-- empty state sample -->
-                <!--
                 <div class="empty">
                     <h3>No orders yet</h3>
                     <p>You haven't placed any orders. Start shopping now!</p>
                     <button class="btn btn-primary" style="margin-top: 15px;">Shop Now</button>
                 </div>
-                -->
             </div>
         </div>
-
-        <footer>
-            <%@include file="../../h&f/footer.jsp"%>
-        </footer>
     </body>
+    <footer>
+        <%@include file="../../h&f/footer.jsp"%>
+    </footer>
 </html>

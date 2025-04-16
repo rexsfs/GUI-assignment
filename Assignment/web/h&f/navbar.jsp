@@ -176,25 +176,11 @@
             .close-icon.active {
                 display: block;
             }
-
-            /* Responsive styles */
-            @media (max-width: 768px) {
-                .user-dropdown, .cart-icon {
-                    order: 2;
-                    margin-top: 10px;
-                }
-
-                .dropdown-content {
-                    right: auto;
-                    left: 50%;
-                    transform: translateX(-50%);
-                }
-            }
         </style>
     </head>
     <body>
         <div class="navbar">
-            <a href="${pageContext.request.contextPath}/../index.jsp">
+            <a href="${pageContext.request.contextPath}/index.jsp">
                 <img src="${pageContext.request.contextPath}/pic/logo/logo.jpg" class="logo">
             </a>
 
@@ -230,12 +216,14 @@
 
         <%
             if (request.getParameter("logout") != null) {
+                session.setAttribute("logoutSuccess", "true");
                 session.invalidate();
+                HttpSession newSession = request.getSession(true);
+                newSession.setAttribute("logoutSuccess", "true");
                 response.sendRedirect(request.getContextPath() + "/index.jsp");
                 return;
             }
         %>
-
 
         <script>
             function toggleSearch() {

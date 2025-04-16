@@ -19,12 +19,9 @@
 
             body {
                 font-family: Arial, sans-serif;
-                background-color: #f5f7ff;
+                background-color: #f5f5f5;
                 margin: 0;
                 padding: 0;
-                display: flex;
-                flex-direction: column;
-                min-height: 100vh;
             }
 
             /* title */
@@ -48,7 +45,7 @@
                 letter-spacing: 1px;
             }
 
-            .login-container {
+            .container {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -56,7 +53,7 @@
                 padding: 40px 20px;
             }
 
-            .login-box {
+            .box {
                 display: flex;
                 background: white;
                 border-radius: 15px;
@@ -66,7 +63,7 @@
                 max-width: 90%;
             }
 
-            .login-image {
+            .image {
                 flex: 1;
                 background: var(--primary-color);
                 display: flex;
@@ -75,12 +72,12 @@
                 padding: 40px;
             }
 
-            .login-image img {
+            .image img {
                 max-width: 100%;
                 height: auto;
             }
 
-            .login-form {
+            .form {
                 flex: 1;
                 padding: 50px;
             }
@@ -92,31 +89,31 @@
                 color: #333;
             }
 
-            .form-group {
+            .input {
                 margin-bottom: 20px;
             }
 
-            .form-group label {
+            .input label {
                 display: block;
                 margin-bottom: 8px;
                 font-weight: bold;
                 color: #555;
             }
 
-            .input-with-icon {
+            .icon {
                 position: relative;
                 display: flex;
                 align-items: center;
             }
 
-            .input-with-icon i {
+            .icon i {
                 position: absolute;
                 left: 12px;
                 color: var(--primary-color);
                 font-size: 16px;
             }
 
-            .input-with-icon input {
+            .icon input {
                 width: 100%;
                 padding: 12px 12px 12px 40px;
                 border: 1px solid #ddd;
@@ -124,12 +121,12 @@
                 font-size: 16px;
             }
 
-            .input-with-icon input:focus {
+            .icon input:focus {
                 outline: none;
                 border-color: var(--primary-color);
             }
 
-            .login-button {
+            .button {
                 width: 100%;
                 padding: 12px;
                 background-color: var(--primary-color);
@@ -143,19 +140,28 @@
                 transition: background-color 0.3s;
             }
 
-            .login-button:hover {
-                background-color: var(--second-color);
+            .button:hover {
+                transform: none;
+                background: #fff;
+                color: var(--primary-color);
+                border: #4C60DF 2px solid;
             }
 
-            .login-link {
+            /* back to previous page */
+            .back {
                 text-align: center;
                 margin-bottom: 30px;
             }
 
-            .login-link a {
+            .back a {
                 color: var(--primary-color);
                 text-decoration: none;
                 font-weight: bold;
+            }
+
+            .back a:hover {
+                color: var(--second-color);
+                text-decoration: underline;
             }
 
             @media (max-width: 768px) {
@@ -182,62 +188,66 @@
             <h2>Profile</h2>
         </div>
 
-        <div class="login-container">
-            <div class="login-box">
-                <div class="login-image">
+        <div class="container">
+            <div class="box">
+                <div class="image">
                     <img src="${pageContext.request.contextPath}/pic/logo/logo_2.png">
                 </div>
-                <div class="login-form">
-                    <h1 class="login-title">Sign Up</h1>
+                <div class="form">
+                    <h1 class="signup-title">Sign Up</h1>
 
-                    <div class="form-group">
-                        <label for="username">Username</label>
-                        <div class="input-with-icon">
-                            <i class="fa-solid fa-user"></i>
-                            <input type="text" id="username" placeholder="Enter username">
+                    <form method="post">
+                        <div class="input">
+                            <label for="username">Username</label>
+                            <div class="icon">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" id="username" placeholder="Enter username" required>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label for="tel">Phone</label>
-                        <div class="input-with-icon">
-                            <i class="fa-solid fa-phone"></i>
-                            <input type="tel" id="tel" placeholder="Enter phone number">
+                        <div class="input">
+                            <label for="tel">Phone</label>
+                            <div class="icon">
+                                <i class="fa-solid fa-phone"></i>
+                                <input type="tel" id="tel" placeholder="Enter phone number" required>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <div class="input-with-icon">
-                            <i class="fa-solid fa-envelope"></i>
-                            <input type="email" id="email" placeholder="Enter email">
+                        <div class="input">
+                            <label for="email">Email</label>
+                            <div class="icon">
+                                <i class="fa-solid fa-envelope"></i>
+                                <input type="email" id="email" placeholder="Enter email" required>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <div class="input-with-icon">
-                            <i class="fa-solid fa-key"></i>
-                            <input type="password" id="password" placeholder="Enter password">
+                        <div class="input">
+                            <label for="password">Password</label>
+                            <div class="icon">
+                                <i class="fa-solid fa-key"></i>
+                                <input type="password" id="password" placeholder="Enter password" required>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label for="confirm-password">Confirm Password</label>
-                        <div class="input-with-icon">
-                            <i class="fa-solid fa-key"></i>
-                            <input type="password" id="confirm-password" placeholder="Confirm password">
+                        <div class="input">
+                            <label for="confirm-password">Confirm Password</label>
+                            <div class="icon">
+                                <i class="fa-solid fa-key"></i>
+                                <input type="password" id="confirm-password" placeholder="Confirm password" required>
+                            </div>
                         </div>
-                    </div>
 
-                    <button class="login-button">Sign Up</button>
+                        <button type="submit" class="button">Sign Up</button>
+                    </form>
 
-                    <div class="login-link">
-                        Already have an account? <a href="${pageContext.request.contextPath}/page/login_signup/login.jsp">Login</a>
+                    <!-- back to previous page -->
+                    <div class="back">
+                        Already have an account? <a href="login.jsp">Login</a>
                     </div>
                 </div>
             </div>
         </div>
+
     </body>
     <footer>
         <%@include file="../../h&f/footer.jsp" %>
