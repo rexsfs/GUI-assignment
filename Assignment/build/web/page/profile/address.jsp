@@ -48,13 +48,15 @@
 
                 <!-- address display sample -->
                 <div class="card">
-                    <p>Jeramy</p>
-                    <p>+60 123456789</p>
-                    <p>123 Main Street</p>
-                    <p>Apartment 4B</p>
-                    <p>New York, NY 10001</p>
-                    <p>United States</p>
-                    <div class="actions">
+                    <div class="card-left">
+                        <p>Jeramy</p>
+                        <p>+60 123456789</p>
+                        <p>123 Main Street</p>
+                        <p>Apartment 4B</p>
+                        <p>New York, NY 10001</p>
+                        <p>United States</p>
+                    </div>
+                    <div class="card-right">
                         <button class="edit-btn" onclick="openEditPopup()">Edit</button>
                         <button class="delete-btn" onclick="deleteAddress()">Delete</button>
                     </div>
