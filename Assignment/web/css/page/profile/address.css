@@ -41,8 +41,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
     font-size: 24px;
 }
 
-/* edit button */
-.edit {
+/* add button */
+.add {
     background-color: var(--primary-color);
     color: white;
     border: none;
@@ -53,7 +53,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
     transition: background-color 0.3s;
 }
 
-.edit:hover {
+.add:hover {
     transform: none;
     background: #fff;
     color: #4C60DF;
@@ -69,14 +69,38 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
     background-color: var(--secondary-color);
 }
 
-.card h3 {
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 18px;
-}
-
 .card p {
     margin: 5px 0;
     line-height: 1.5;
 }
 
+.card-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn, .delete-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.edit-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #45a049;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}

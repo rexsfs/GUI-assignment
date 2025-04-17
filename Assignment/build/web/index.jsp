@@ -9,16 +9,17 @@ Document   : index
 <!DOCTYPE html>
 <html>
     <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/page/index.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/page/body.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Page</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/page/index.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/page/body.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/h&f/popup.css">
     </head>
-<header>
-    <%@include file="h&f/navbar.jsp" %>
-</header>
+    <header>
+        <%@include file="h&f/navbar.jsp" %>
+    </header>
     <body>
         <!-- success message popup -->
         <% if (session.getAttribute("loginSuccess") != null && session.getAttribute("loginSuccess").equals("true")) { %>
@@ -47,42 +48,42 @@ Document   : index
 
         <img src="pic/pic_homepage/web_image.jpg" class="web_img">
 
-    <!--Categories-->
-    <div class="category-section">
-        <h2 class="category-title">Category</h2>
+        <!--Categories-->
+        <div class="category-section">
+            <h2 class="category-title">Category</h2>
 
-        <div class="categories">
-            <div class="category-item">
-                <img src="pic/pic_homepage/iem.jpg">
-                <span class="category-name">IEM</span>
-            </div>
+            <div class="categories">
+                <div class="category-item">
+                    <img src="pic/pic_homepage/iem.jpg">
+                    <span class="category-name">IEM</span>
+                </div>
 
-            <div class="category-item">
-                <img src="pic/pic_homepage/mouse.png">
-                <span class="category-name">Mouse</span>
-            </div>
+                <div class="category-item">
+                    <img src="pic/pic_homepage/mouse.png">
+                    <span class="category-name">Mouse</span>
+                </div>
 
-            <div class="category-item">
-                <img src="pic/pic_homepage/keyboard.png">
-                <span class="category-name">Keyboard</span>
+                <div class="category-item">
+                    <img src="pic/pic_homepage/keyboard.png">
+                    <span class="category-name">Keyboard</span>
+                </div>
             </div>
         </div>
-    </div>
 
-    <script>
+        <script>
             <!-- pop up -->
-           function closePopup() {
-               const popup = document.getElementById('popup');
-               const overlay = document.getElementById('overlay');
+            function closePopup() {
+                const popup = document.getElementById('popup');
+                const overlay = document.getElementById('overlay');
 
-               if (popup && overlay) {
-                   popup.classList.remove('show');
-                   overlay.classList.remove('show');
-               }
-           }
-    </script>
-</body>
-<footer>
-    <%@include file="h&f/footer.jsp" %>
-</footer>
+                if (popup && overlay) {
+                    popup.classList.remove('show');
+                    overlay.classList.remove('show');
+                }
+            }
+        </script>
+    </body>
+    <footer>
+        <%@include file="h&f/footer.jsp" %>
+    </footer>
 </html>

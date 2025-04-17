@@ -48,12 +48,8 @@
 
                 <!-- card list sample -->
                 <div class="list">
-                    <!-- Visa Card -->
                     <!--
                     <div class="card">
-                        <div class="type">
-                            <i class="fab fa-cc-visa"></i>
-                        </div>
                         <div class="number">•••• •••• •••• 4242</div>
                         <div class="details">
                             <div>
